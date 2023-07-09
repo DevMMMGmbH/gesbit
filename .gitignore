@@ -1,0 +1,19 @@
+.DS_Store
+.idea
+nbproject
+*:Zone.Identifier
+
+/.build
+/.db-backup
+/.ddev
+/.git
+/.git-bak
+/.info
+/.vscode
+# /config
+/public
+/var
+/vendor
+/LICENSE
+
+/composer.lock
