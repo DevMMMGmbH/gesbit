@@ -1,0 +1,35 @@
+{
+    "name": "grid-design/rh-theme",
+    "type": "typo3-cms-extension",
+    "description": "Basic page config",
+    "homepage": "https://www.typo-script.de",
+    "license": [
+        "GPL-2.0-or-later"
+    ],
+    "keywords": [
+        "TYPO3 CMS"
+    ],
+    "authors": [
+        {
+            "name": "Robert Heyduck",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "typo3/cms-core": "^11.5"
+    },
+    "autoload": {
+        "psr-4": {
+            "GridDesign\\RhTheme\\": "Classes/"
+        }
+    },
+    "replace": {
+        "grid-design/rh-theme": "self.version",
+        "typo3-ter/rh-theme": "self.version"
+    },
+    "extra": {
+        "typo3/cms": {
+            "extension-key": "rh_theme"
+        }
+    }
+}

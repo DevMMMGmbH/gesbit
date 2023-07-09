@@ -1,0 +1,36 @@
+#
+# BACKENDLAYOUT: DEFAULT
+#
+mod {
+    web_layout {
+        BackendLayouts {
+            Startseite {
+                title = Startseite
+                config {
+                    backend_layout {
+                        colCount = 3
+                        rowCount = 1
+                        rows {
+                            1 {
+                                columns {
+                                    1 {
+                                        name = Teaser (1)
+                                        colPos = 1
+                                    }
+                                    2 {
+                                        name = Hauptspalte (0)
+                                        colPos = 0
+                                    }
+                                    3 {
+                                        name = rechts (3)
+                                        colPos = 3
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

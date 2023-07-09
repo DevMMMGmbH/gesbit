@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+    <file source-language="de" target-language="en" datatype="plaintext" original="messages" date="2020-03-29UTC11:47:570" product-name="rh_theme">
+        <header>
+            <authorName>Robert Heyduck</authorName>
+            <authorEmail>mail@typo-script.de</authorEmail>
+        </header>
+        <body>
+            <trans-unit id="validation.error.name.1221560910">
+                <source>Geben Sie bitte Ihren Namen ein.</source>
+                <target>Please enter your name.</target>
+            </trans-unit>
+            <trans-unit id="validation.error.email.1221560910">
+                <source>Geben Sie bitte Ihre E-Mail Adresse ein.</source>
+                <target>Please enter your e-mail.</target>
+            </trans-unit>
+            <trans-unit id="validation.error.dsgvo.1221560910">
+                <source>Bestätigen Sie bitte die die Datenschutzbestimmungen.</source>
+                <target>Please accept the data policy.</target>
+            </trans-unit>
+            <trans-unit id="element.name.properties.label">
+                <source>Ihr Name</source>
+                <target>Your Name</target>
+            </trans-unit>
+            <trans-unit id="element.email.properties.label">
+                <source>Ihre E-Mail</source>
+                <target>Your E-Mail</target>
+            </trans-unit>
+            <trans-unit id="element.phone.properties.label">
+                <source>Ihre Telefonnummer</source>
+                <target>Phone</target>
+            </trans-unit>
+            <trans-unit id="element.mobile.properties.label">
+                <source>Ihre Handynummer</source>
+                <target>Mobile</target>
+            </trans-unit>
+            <trans-unit id="element.street.properties.label">
+                <source>Ihre Strasse</source>
+                <target>Street</target>
+            </trans-unit>
+            <trans-unit id="element.zip.properties.label">
+                <source>Ihre Postleitzahl</source>
+                <target>Zip</target>
+            </trans-unit>
+            <trans-unit id="element.city.properties.label">
+                <source>Ihr Ort</source>
+                <target>City</target>
+            </trans-unit>
+            <trans-unit id="element.dateandtime.properties.label">
+                <source>Datum und Uhrzeit</source>
+                <target>Date and time</target>
+            </trans-unit>
+            <trans-unit id="element.selectMassageTime.properties.label">
+                <source>Massage-Dauer</source>
+                <target>Massage duration</target>
+            </trans-unit>
+            <trans-unit id="element.comment.properties.label">
+                <source>Ihre Nachricht</source>
+                <target>Your message</target>
+            </trans-unit>
+            <trans-unit id="element.rating.properties.label">
+                <source>1 ist nicht gut. 5 wäre sehr gut.</source>
+                <target>One (bad) to five (very good)</target>
+            </trans-unit>
+            <trans-unit id="element.dsgvo.properties.label">
+                <source>Hiermit akzeptiere ich die &lt;a href="https://www.typo-script.de/datenschutz/"&gt;Datenschutzerklärung&lt;/a&gt;. Ich bin damit einverstanden, dass die eingetragenen Daten elektronisch gespeichert werden. Meine Daten werden danach zur Bearbeitung und Beantwortung meiner Anfrage benutzt.</source>
+                <target>readed and agree</target>
+            </trans-unit>
+            <trans-unit id="element.Form.renderingOptions.submitButtonLabel">
+                <source>Absenden</source>
+                <target>Submit</target>
+            </trans-unit>
+        </body>
+    </file>
+</xliff>

@@ -1,0 +1,35 @@
+{
+    "name": "grid-design/rh-feuser",
+    "type": "typo3-cms-extension",
+    "description": "Erweitert Tabelle fe_users um zusaetzliche Felder fuer onetimeaccount",
+    "homepage": "https://www.typo-script.de",
+    "license": [
+        "GPL-2.0-or-later"
+    ],
+    "keywords": [
+        "TYPO3 CMS"
+    ],
+    "authors": [
+        {
+            "name": "Robert Heyduck",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "typo3/cms-core": "^11.5"
+    },
+    "autoload": {
+        "psr-4": {
+            "GridDesign\\RhFeuser\\": "Classes/"
+        }
+    },
+    "replace": {
+        "grid-design/rh-feuser": "self.version",
+        "typo3-ter/rh-feuser": "self.version"
+    },
+    "extra": {
+        "typo3/cms": {
+            "extension-key": "rh_feuser"
+        }
+    }
+}

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+    <file source-language="de" target-language="en" datatype="plaintext" original="messages" date="2023-05-07UTC10:00:00" product-name="rh_feuser">
+        <header>
+            <authorName>Robert Heyduck</authorName>
+            <authorEmail>dev@typo-script.de</authorEmail>
+        </header>
+        <body>
+            <trans-unit id="fe_users.tx_feuserserw_gender.I.0">
+                <source>Herr</source>
+                <target>Mr.</target>
+            </trans-unit>
+            <trans-unit id="fe_users.tx_feuserserw_gender.I.1">
+                <source>Frau</source>
+                <target>Ms.</target>
+            </trans-unit>
+            <trans-unit id="fe_users.tx_feuserserw_gender">
+                <source>Anrede</source>
+                <target>Salutation</target>
+            </trans-unit>
+            <trans-unit id="fe_users.tx_feuserserw_projekt">
+                <source>Projekt</source>
+                <target>Project</target>
+            </trans-unit>
+            <trans-unit id="fe_users.tx_feuserserw_traeger">
+                <source>Träger/Institution</source>
+                <target>Carrier/Institution</target>
+            </trans-unit>
+        </body>
+    </file>
+</xliff>

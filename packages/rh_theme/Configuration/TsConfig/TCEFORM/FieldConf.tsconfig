@@ -1,0 +1,81 @@
+## Spaltenauswahl in Dropdownliste reduzieren
+#TCEFORM.tt_content.colPos.removeItems = 1
+
+TCEFORM.pages.layout.altLabels.0 = 2 Spalten
+TCEFORM.pages.layout.altLabels.1 = 1 Spalte
+
+
+## Dateilinks Standardlayout
+TCEFORM.tt_content.layout.types.uploads.removeItems= 0,3
+TCEFORM.tt_content.layout.types.uploads.altLabels.1 = Icon
+TCEFORM.tt_content.layout.types.uploads.altLabels.2 = Vorschaubild
+
+## Ueberschriften
+TCEFORM.tt_content.header_layout.altLabels.1 = Überschrift 1
+TCEFORM.tt_content.header_layout.altLabels.2 = Überschrift 2
+TCEFORM.tt_content.header_layout.altLabels.3 = Überschrift 3
+
+TCEFORM.tt_content.header_layout.removeItems = 0,4,5
+
+RTE.classesAnchor{
+  externalLink.titleText >
+  internalLink.titleText >
+  mail.titleText >
+  externalLinkInNewWindow.titleText >
+  internalLinkInNewWindow.titleText >
+  download.titleText >
+}
+
+
+# neue Seiten: SSL
+TCAdefaults.pages.url_scheme = 2
+
+#RTE
+
+RTE.classes.weiterlesen.name = Weiterlesen Box
+
+RTE.default {
+  enableWordClean = 1
+  contentCSS = EXT:men_gesbit/Resources/Public/Css/rte.css
+  defaultContentLanguage = de
+
+  # define labels for headings
+  buttons.formatblock.items {
+    h1.label = Überschrift 1
+    h2.label = Überschrift 2
+    h3.label = Überschrift 3
+  }
+
+  showButtons := addToList (pastetoggle)
+  buttons.pastetoggle.setActiveOnRteOpen = 1
+  hideButtons = subscript, superscript, textcolor, indent, outdent, textindicator
+  buttons.formatblock.removeItems = h4,h5, h6, pre, address, article, aside, footer, header, nav, section
+  buttons.blockstyle.tags.div.allowedClasses = weiterlesen
+buttons.link.options.removeItems = folder
+
+}
+RTE.default.FE < RTE.default
+
+
+# News Layouts
+
+tx_news.templateLayouts {
+  84 = Blog Liste rechts
+  85 = News Intern Liste rechts
+  86 = Calender rechts
+  90 = Startseite Intern
+  95 = Startseite Blog
+  99 = Startseite Extern
+}
+
+# RTL fuer arabische Schriftzeichen
+
+    RTE.default.showButtons := addToList(righttoleft)
+    RTE.default.hideButtons := removeFromList(righttoleft)
+
+    RTE.default.showButtons := addToList(lefttoright)
+    RTE.default.hideButtons := removeFromList(lefttoright)
+
+    RTE.default.tags.p.allowedAttribs = dir
+    RTE.default.proc.keepPDIVattribs = dir
+    RTE.default.proc.entryHTMLparser_db.tags.tags.p.allowedAttribs = dir

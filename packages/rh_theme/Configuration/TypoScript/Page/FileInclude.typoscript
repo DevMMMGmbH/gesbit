@@ -1,0 +1,46 @@
+page {
+    ### CSS FILES ###
+    #################################################################
+    includeCSSLibs {
+        
+    }
+    includeCSS {
+        newscal >
+        newscal =  EXT:rh_theme/Resources/Public/Css/Newscal.scss
+        newscal.media = all
+
+        form =  EXT:rh_theme/Resources/Public/Css/Form.scss
+        form.media = all
+        berichte = EXT:rh_theme/Resources/Public/Css/Berichte.scss
+        berichte.media = all
+
+        main = EXT:rh_theme/Resources/Public/Css/Main.scss
+        main.media = all
+
+        small = EXT:rh_theme/Resources/Public/Css/Small.scss
+        small.media = screen and (max-width:979px)
+
+        print = EXT:rh_theme/Resources/Public/Css/Print.scss
+        print.media = print
+
+        startseite = EXT:rh_theme/Resources/Public/Css/Startseite.scss
+        startseite.media = all
+        startseite.if {
+            equals.data = TSFE:id
+            value = 1
+        }
+    }
+    ### JS FILES ###
+    #################################################################
+    includeJSLibs {
+        lib_10 = 
+    }
+    includeJS {
+    }
+    includeJSFooterlibs {
+        lib_10 = 
+    }
+    includeJSFooter {
+        js_10 = 
+    }
+}

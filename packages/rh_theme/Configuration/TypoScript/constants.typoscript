@@ -1,0 +1,79 @@
+##############################
+#### FLUID STYLED CONTENT ####
+##############################
+@import 'EXT:fluid_styled_content/Configuration/TypoScript/constants.typoscript'
+styles {
+    templates {
+        layoutRootPath = EXT:rh_theme/Resources/Private/Layouts/ContentElements/
+        partialRootPath = EXT:rh_theme/Resources/Private/Partials/ContentElements/
+        templateRootPath = EXT:rh_theme/Resources/Private/Templates/ContentElements/
+    }
+    // Default Image width
+    // content.textmedia.maxW = 3840
+    // content.textmedia.maxWInText = 3840
+    // content.image.lazyLoading = lazy
+    // content.defaultHeaderType = 2
+}
+
+// [traverse(request.getQueryParams()['defVals']['tt_content']['colPos']) == 0]
+// styles.content.textmedia.maxW = 608
+// [end]
+// [traverse(request.getQueryParams()['defVals']['tt_content']['colPos']) == 2]
+// styles.content.textmedia.maxW = 304
+// [end]
+// [traverse(request.getQueryParams()['defVals']['tt_content']['colPos']) == 1 && getTSFE().id == 1]
+// styles.content.textmedia.maxW = 304
+// [end]
+
+
+// [traverse(request.getParsedBody()['defVals']['tt_content']['colPos'])== 2]
+// styles.content.textmedia.maxW = 304
+// [end]
+
+styles.content.textmedia.maxW = 608
+
+
+####################
+#### EXTENSIONS ####
+####################
+// @import 'EXT:rh_theme/Configuration/TypoScript/Extensions/rh_module/constants.typoscript'
+
+
+############
+### PAGE ###
+############
+page {
+     fluidtemplate {
+        layoutRootPath = EXT:rh_theme/Resources/Private/Layouts/Page/
+        partialRootPath = EXT:rh_theme/Resources/Private/Partials/Page/
+        templateRootPath = EXT:rh_theme/Resources/Private/Templates/Page/
+    }
+    meta {
+        description =
+        author =
+        keywords =
+        viewport = width=device-width, initial-scale=1
+        robots = index,follow
+        apple-mobile-web-app-capable = no
+        compatible = IE=edge
+    }
+    tracking {
+        google {
+            trackingID =
+            anonymizeIp = 1
+        }
+    }
+}
+
+
+##############
+### CONFIG ###
+##############
+config {
+    no_cache = 0
+    pageTitleFirst = 1
+    removeDefaultCss = 1
+    removeDefaultJS = external
+    headerComment = upgraded by GRID DESIGN www.typo-script.de
+    sendCacheHeaders = 1
+}

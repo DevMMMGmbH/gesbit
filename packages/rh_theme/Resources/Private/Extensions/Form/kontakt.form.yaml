@@ -1,0 +1,150 @@
+
+renderingOptions:
+  submitButtonLabel: Absenden
+type: Form
+identifier: kontakt
+label: Kontakt
+prototypeName: standard
+finishers:
+  -
+    options:
+      subject: 'GesBit Kontakt'
+      recipients:
+        info@gesbit.de: Admin
+      senderAddress: '{email-1}'
+      senderName: '{text-2}, {text-1}'
+      addHtmlPart: true
+      attachUploads: true
+      useFluidEmail: false
+      title: ''
+    identifier: EmailToSender
+  -
+    options:
+      message: 'Vielen Dank für Ihr Nachricht.'
+      contentElementUid: ''
+    identifier: Confirmation
+renderables:
+  -
+    renderingOptions:
+      previousButtonLabel: 'Zurück zur Eingabe'
+      nextButtonLabel: weiter
+    type: Page
+    identifier: page-1
+    label: 'Schritt 1'
+    renderables:
+      -
+        properties:
+          text: 'Bitte füllen Sie die mit * gekennzeichneten Pflichtfelder aus.'
+        type: StaticText
+        identifier: statictext-1
+        label: 'Bitte teilen Sie uns Ihre Fragen und Anregungen über das Kontaktformular mit.'
+      -
+        type: Fieldset
+        identifier: fieldset-1
+        label: ''
+        renderables:
+          -
+            defaultValue: ''
+            type: Text
+            identifier: text-1
+            label: Vorname
+            properties:
+              fluidAdditionalAttributes:
+                required: required
+            validators:
+              -
+                identifier: NotEmpty
+          -
+            defaultValue: ''
+            type: Text
+            identifier: text-2
+            label: Nachname
+            properties:
+              fluidAdditionalAttributes:
+                required: required
+            validators:
+              -
+                identifier: NotEmpty
+          -
+            defaultValue: ''
+            type: Email
+            identifier: email-1
+            label: E-Mail-Adresse
+            properties:
+              fluidAdditionalAttributes:
+                required: required
+            validators:
+              -
+                identifier: EmailAddress
+              -
+                identifier: NotEmpty
+          -
+            defaultValue: ''
+            type: Text
+            identifier: text-3
+            label: Telefon
+          -
+            defaultValue: ''
+            type: Text
+            identifier: text-4
+            label: 'Straße / Nr.'
+          -
+            defaultValue: ''
+            type: Text
+            identifier: text-5
+            label: 'PLZ / Ort'
+          -
+            defaultValue: ''
+            type: Text
+            identifier: text-6
+            label: 'Träger / Institution'
+          -
+            properties:
+              options:
+                'JOB POINT Berlin': 'JOB POINT Berlin'
+                'Mobile Jobberatung': 'Mobile Jobberatung'
+                'Qualifizierung der Jobcoaches': 'Qualifizierung der Jobcoaches'
+                'Beratung zu Bildung und Beruf NTK': 'Beratung zu Bildung und Beruf NTK'
+                'Beratung zu Bildung und Beruf SCW': 'Beratung zu Bildung und Beruf SCW'
+                'Fachstelle Qualifizierungsberatung in KMU': 'Fachstelle Qualifizierungsberatung in KMU'
+                'ARRIVO Soziales': 'ARRIVO Soziales'
+                Alpha-Bündnis: Alpha-Bündnis
+                'Geschäftsstelle Supervision und Coaching 2.0': 'Geschäftsstelle Supervision und Coaching 2.0'
+              prependOptionLabel: 'An welches Projekt richtet sich Ihre Anfrage:'
+            type: SingleSelect
+            identifier: singleselect-1
+            label: Projekt
+          -
+            defaultValue: ''
+            type: Text
+            identifier: text-7
+            label: Betreff
+          -
+            defaultValue: ''
+            type: Textarea
+            identifier: textarea-1
+            label: 'Ihre Nachricht'
+            properties:
+              fluidAdditionalAttributes:
+                required: required
+            validators:
+              -
+                identifier: NotEmpty
+          -
+            type: Checkbox
+            identifier: checkbox-1
+            label: Datenschutz
+            properties:
+              fluidAdditionalAttributes:
+                required: required
+              elementDescription: 'Ich habe die <a class="internal-link" href="/datenschutz/" target="_blank">Datenschutzerklärung</a> zur Kenntnis genommen.'
+            validators:
+              -
+                identifier: NotEmpty
+  -
+    renderingOptions:
+      previousButtonLabel: 'Zurück zur Eingabe'
+      nextButtonLabel: weiter
+    type: SummaryPage
+    identifier: summarypage-1
+    label: 'Schritt 2'

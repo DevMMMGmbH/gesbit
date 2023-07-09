@@ -1,0 +1,314 @@
+imports:
+    - { resource: "EXT:rte_ckeditor/Configuration/RTE/Processing.yaml" }
+    - { resource: "EXT:rte_ckeditor/Configuration/RTE/Editor/Base.yaml" }
+    - { resource: "EXT:rte_ckeditor/Configuration/RTE/Editor/Plugins.yaml" }
+
+editor:
+    config:
+        contentsCss: ["EXT:rh_theme/Resources/Public/Css/rte.min.css", "EXT:rh_theme/Resources/Public/Assets/fontawesome/css/all.min.css"]
+
+        stylesSet:
+            # p styles
+            - { name: "LLL:EXT:rh_theme/Resources/Private/Language/de.locallang_be.xlf:TCEFORM.tt_content.p_class.lead", element: "p", attributes: { 'class': 'lead' } }
+
+            # span styles
+            - { name: "LLL:EXT:rh_theme/Resources/Private/Language/de.locallang_be.xlf:TCEFORM.tt_content.span_class.quotefooter", element: "span", attributes: { 'class': 'blockquote-footer' } }
+            - { name: "H1 span", element: "span", attributes: { 'class': 'h1' }}
+            - { name: "H2 span", element: "span", attributes: { 'class': 'h2' }}
+            - { name: "H3 span", element: "span", attributes: { 'class': 'h3' }}
+            - { name: "H4 span", element: "span", attributes: { 'class': 'h4' }}
+            - { name: "H5 span", element: "span", attributes: { 'class': 'h5' }}
+            - { name: "H6 span", element: "span", attributes: { 'class': 'h6' }}
+
+            # link styles
+            - { name: "LLL:EXT:rh_theme/Resources/Private/Language/de.locallang_be.xlf:TCEFORM.tt_content.a_class.btn_btn-primary", element: ['a'], attributes: { 'class': 'btn btn-primary' }}
+            - { name: "LLL:EXT:rh_theme/Resources/Private/Language/de.locallang_be.xlf:TCEFORM.tt_content.a_class.btn_btn-secondary", element: ['a'], attributes: { 'class': 'btn btn-secondary' }}
+            - { name: "LLL:EXT:rh_theme/Resources/Private/Language/de.locallang_be.xlf:TCEFORM.tt_content.a_class.btn_btn-outline-primary", element: ['a'], attributes: { 'class': 'btn btn-outline-primary' }}
+            - { name: "LLL:EXT:rh_theme/Resources/Private/Language/de.locallang_be.xlf:TCEFORM.tt_content.a_class.btn_btn-outline-secondary", element: ['a'], attributes: { 'class': 'btn btn-outline-secondary' }}
+
+            # table styles
+            - { name: "LLL:EXT:rh_theme/Resources/Private/Language/de.locallang_be.xlf:TCEFORM.tt_content.table_class.table-bordered", element: ['table'], attributes: { 'class': 'table table-bordered' }}
+            - { name: "LLL:EXT:rh_theme/Resources/Private/Language/de.locallang_be.xlf:TCEFORM.tt_content.table_class.table-borderless", element: ['table'], attributes: { 'class': 'table table-borderless' }}
+            - { name: "LLL:EXT:rh_theme/Resources/Private/Language/de.locallang_be.xlf:TCEFORM.tt_content.table_class.table-hover", element: ['table'], attributes: { 'class': 'table table-hover' }}
+            - { name: "LLL:EXT:rh_theme/Resources/Private/Language/de.locallang_be.xlf:TCEFORM.tt_content.table_class.table-striped", element: ['table'], attributes: { 'class': 'table table-striped' }}
+            - { name: "LLL:EXT:rh_theme/Resources/Private/Language/de.locallang_be.xlf:TCEFORM.tt_content.table_class.table-sm", element: ['table'], attributes: { 'class': 'table table-sm' }}
+
+            # list styles
+            - { name: "LLL:EXT:rh_theme/Resources/Private/Language/de.locallang_be.xlf:TCEFORM.tt_content.ul_class.group", element: ['ul'], attributes: { 'class': 'list-group' }}
+            - { name: "LLL:EXT:rh_theme/Resources/Private/Language/de.locallang_be.xlf:TCEFORM.tt_content.ul_class.group_item", element: ['li'], attributes: { 'class': 'list-group-item' }}
+
+        toolbarGroups:
+            - { name: styles, groups: [ format, styles ] }
+            - { name: basicstyles, groups: [ basicstyles ] }
+            - { name: paragraph, groups: [ list, blocks, align ] }
+            # - "/"
+            - { name: links, groups: [ links ] }
+            - { name: clipboard, groups: [ clipboard, cleanup, undo ] }
+            - { name: editing, groups: [ spellchecker ] }
+            - { name: insert, groups: [ insert ] }
+            - { name: tools, groups: [ table, specialchar ] }
+            - { name: document, groups: [ mode ] }
+            # - { name: colors }
+
+        format_tags: "p;h1;h2;h3;h4;h5;h6;pre;div"
+
+        justifyClasses:
+            - text-start
+            - text-center
+            - text-end
+            - text-justify
+
+        extraPlugins:
+            - justify
+            # - colorbutton
+
+        removePlugins:
+            - image
+
+        removeButtons:
+            - Anchor
+            # - Underline
+            # - Strike
+
+
+# Allow tags
+processing:
+  allowTags:
+    - s
+    - u
+    - blockquote
+
+
+# Button config and defaults
+buttons:
+    link:
+        relAttribute:
+            enabled: true
+        properties:
+            class:
+                allowedClasses: '
+                    internal-link,
+                    internal-link btn btn-primary,
+                    internal-link btn btn-secondary,
+                    internal-link btn btn-outline-primary,
+                    internal-link btn btn-outline-secondary,
+                    external-link,
+                    external-link btn btn-primary,
+                    external-link btn btn-secondary,
+                    external-link btn btn-outline-primary,
+                    external-link btn btn-outline-secondary,
+                    file-link,
+                    file-link btn btn-primary,
+                    file-link btn btn-secondary,
+                    file-link btn btn-outline-primary,
+                    file-link btn btn-outline-secondary,
+                    folder-link,
+                    folder-link btn btn-primary,
+                    folder-link btn btn-secondary,
+                    folder-link btn btn-outline-primary,
+                    folder-link btn btn-outline-secondary,
+                    mail-link,
+                    mail-link btn btn-primary,
+                    mail-link btn btn-secondary,
+                    mail-link btn btn-outline-primary,
+                    mail-link btn btn-outline-secondary,
+                    phone-link,
+                    phone-link btn btn-primary,
+                    phone-link btn btn-secondary,
+                    phone-link btn btn-outline-primary,
+                    phone-link btn btn-outline-secondary
+                '
+        page:
+            properties:
+                class:
+                    default: 'internal-link'
+        url:
+            properties:
+                class:
+                    default: 'external-link'
+        file:
+            properties:
+                class:
+                    default: 'file-link'
+        folder:
+            properties:
+                class:
+                    default: 'folder-link'
+        mail:
+            properties:
+                class:
+                    default: 'mail-link'
+        telephone:
+            properties:
+                class:
+                    default: 'phone-link'
+
+# Classes config
+classesAnchor:
+    'internal-link':
+        class: 'internal-link'
+        type: 'page'
+    'internal-link btn btn-primary':
+        class: 'internal-link btn btn-primary'
+        type: 'page'
+    'internal-link btn btn-secondary':
+        class: 'internal-link btn btn-secondary'
+        type: 'page'
+    'internal-link btn btn-outline-primary':
+        class: 'internal-link btn btn-outline-primary'
+        type: 'page'
+    'internal-link btn btn-outline-secondary':
+        class: 'internal-link btn btn-outline-secondary'
+        type: 'page'
+
+    'external-link':
+        class: 'external-link'
+        type: 'url'
+        target: "_blank"
+    'external-link btn btn-primary':
+        class: 'external-link btn btn-primary'
+        type: 'url'
+        target: "_blank"
+    'external-link btn btn-secondary':
+        class: 'external-link btn btn-secondary'
+        type: 'url'
+        target: "_blank"
+    'external-link btn btn-outline-primary':
+        class: 'external-link btn btn-outline-primary'
+        type: 'url'
+        target: "_blank"
+    'external-link btn btn-outline-secondary':
+        class: 'external-link btn btn-outline-secondary'
+        type: 'url'
+        target: "_blank"
+
+    'file-link':
+        class: 'file-link'
+        type: 'file'
+    'file-link btn btn-primary':
+        class: 'file-link btn btn-primary'
+        type: 'file'
+    'file-link btn btn-secondary':
+        class: 'file-link btn btn-secondary'
+        type: 'file'
+    'file-link btn btn-outline-primary':
+        class: 'file-link btn btn-outline-primary'
+        type: 'file'
+    'file-link btn btn-outline-secondary':
+        class: 'file-link btn btn-outline-secondary'
+        type: 'file'
+
+    'folder-link':
+        class: 'folder-link'
+        type: 'folder'
+    'folder-link btn btn-primary':
+        class: 'folder-link btn btn-primary'
+        type: 'folder'
+    'folder-link btn btn-secondary':
+        class: 'folder-link btn btn-secondary'
+        type: 'folder'
+    'folder-link btn btn-outline-primary':
+        class: 'folder-link btn btn-outline-primary'
+        type: 'folder'
+    'folder-link btn btn-outline-secondary':
+        class: 'folder-link btn btn-outline-secondary'
+        type: 'folder'
+
+    'mail-link':
+        class: 'mail-link'
+        type: 'mail'
+    'mail-link btn btn-primary':
+        class: 'mail-link btn btn-primary'
+        type: 'mail'
+    'mail-link btn btn-secondary':
+        class: 'mail-link btn btn-secondary'
+        type: 'mail'
+    'mail-link btn btn-outline-primary':
+        class: 'mail-link btn btn-outline-primary'
+        type: 'mail'
+    'mail-link btn btn-outline-secondary':
+        class: 'mail-link btn btn-outline-secondary'
+        type: 'mail'
+
+    'phone-link':
+        class: 'phone-link'
+        type: 'telephone'
+    'phone-link btn btn-primary':
+        class: 'phone-link btn btn-primary'
+        type: 'telephone'
+    'phone-link btn btn-secondary':
+        class: 'phone-link btn btn-secondary'
+        type: 'telephone'
+    'phone-link btn btn-outline-primary':
+        class: 'phone-link btn btn-outline-primary'
+        type: 'telephone'
+    'phone-link btn btn-outline-secondary':
+        class: 'phone-link btn btn-outline-secondary'
+        type: 'telephone'
+
+classes:
+    'internal-link':
+        name: 'LLL:EXT:rh_theme/Resources/Private/Language/de.locallang_be.xlf:TCEFORM.tt_content.a_class.internal-link'
+    'internal-link btn btn-primary':
+        name: 'LLL:EXT:rh_theme/Resources/Private/Language/de.locallang_be.xlf:TCEFORM.tt_content.a_class.internal-link_btn_btn-primary'
+    'internal-link btn btn-secondary':
+        name: 'LLL:EXT:rh_theme/Resources/Private/Language/de.locallang_be.xlf:TCEFORM.tt_content.a_class.internal-link_btn_btn-secondary'
+    'internal-link btn btn-outline-primary':
+        name: 'LLL:EXT:rh_theme/Resources/Private/Language/de.locallang_be.xlf:TCEFORM.tt_content.a_class.internal-link_btn_btn-outline-primary'
+    'internal-link btn btn-outline-secondary':
+        name: 'LLL:EXT:rh_theme/Resources/Private/Language/de.locallang_be.xlf:TCEFORM.tt_content.a_class.internal-link_btn_btn-outline-secondary'
+
+    'external-link':
+        name: 'LLL:EXT:rh_theme/Resources/Private/Language/de.locallang_be.xlf:TCEFORM.tt_content.a_class.external-link'
+    'external-link btn btn-primary':
+        name: 'LLL:EXT:rh_theme/Resources/Private/Language/de.locallang_be.xlf:TCEFORM.tt_content.a_class.external-link_btn_btn-primary'
+    'external-link btn btn-secondary':
+        name: 'LLL:EXT:rh_theme/Resources/Private/Language/de.locallang_be.xlf:TCEFORM.tt_content.a_class.external-link_btn_btn-secondary'
+    'external-link btn btn-outline-primary':
+        name: 'LLL:EXT:rh_theme/Resources/Private/Language/de.locallang_be.xlf:TCEFORM.tt_content.a_class.external-link_btn_btn-outline-primary'
+    'external-link btn btn-outline-secondary':
+        name: 'LLL:EXT:rh_theme/Resources/Private/Language/de.locallang_be.xlf:TCEFORM.tt_content.a_class.external-link_btn_btn-outline-secondary'
+
+    'file-link':
+        name: 'LLL:EXT:rh_theme/Resources/Private/Language/de.locallang_be.xlf:TCEFORM.tt_content.a_class.file-link'
+    'file-link btn btn-primary':
+        name: 'LLL:EXT:rh_theme/Resources/Private/Language/de.locallang_be.xlf:TCEFORM.tt_content.a_class.file-link_btn_btn-primary'
+    'file-link btn btn-secondary':
+        name: 'LLL:EXT:rh_theme/Resources/Private/Language/de.locallang_be.xlf:TCEFORM.tt_content.a_class.file-link_btn_btn-secondary'
+    'file-link btn btn-outline-primary':
+        name: 'LLL:EXT:rh_theme/Resources/Private/Language/de.locallang_be.xlf:TCEFORM.tt_content.a_class.file-link_btn_btn-outline-primary'
+    'file-link btn btn-outline-secondary':
+        name: 'LLL:EXT:rh_theme/Resources/Private/Language/de.locallang_be.xlf:TCEFORM.tt_content.a_class.file-link_btn_btn-outline-secondary'
+
+    'folder-link':
+        name: 'LLL:EXT:rh_theme/Resources/Private/Language/de.locallang_be.xlf:TCEFORM.tt_content.a_class.folder-link'
+    'folder-link btn btn-primary':
+        name: 'LLL:EXT:rh_theme/Resources/Private/Language/de.locallang_be.xlf:TCEFORM.tt_content.a_class.folder-link_btn_btn-primary'
+    'folder-link btn btn-secondary':
+        name: 'LLL:EXT:rh_theme/Resources/Private/Language/de.locallang_be.xlf:TCEFORM.tt_content.a_class.folder-link_btn_btn-secondary'
+    'folder-link btn btn-outline-primary':
+        name: 'LLL:EXT:rh_theme/Resources/Private/Language/de.locallang_be.xlf:TCEFORM.tt_content.a_class.folder-link_btn_btn-outline-primary'
+    'folder-link btn btn-outline-secondary':
+        name: 'LLL:EXT:rh_theme/Resources/Private/Language/de.locallang_be.xlf:TCEFORM.tt_content.a_class.folder-link_btn_btn-outline-secondary'
+
+    'mail-link':
+        name: 'LLL:EXT:rh_theme/Resources/Private/Language/de.locallang_be.xlf:TCEFORM.tt_content.a_class.mail-link'
+    'mail-link btn btn-primary':
+        name: 'LLL:EXT:rh_theme/Resources/Private/Language/de.locallang_be.xlf:TCEFORM.tt_content.a_class.mail-link_btn_btn-primary'
+    'mail-link btn btn-secondary':
+        name: 'LLL:EXT:rh_theme/Resources/Private/Language/de.locallang_be.xlf:TCEFORM.tt_content.a_class.mail-link_btn_btn-secondary'
+    'mail-link btn btn-outline-primary':
+        name: 'LLL:EXT:rh_theme/Resources/Private/Language/de.locallang_be.xlf:TCEFORM.tt_content.a_class.mail-link_btn_btn-outline-primary'
+    'mail-link btn btn-outline-secondary':
+        name: 'LLL:EXT:rh_theme/Resources/Private/Language/de.locallang_be.xlf:TCEFORM.tt_content.a_class.mail-link_btn_btn-outline-secondary'
+
+    'phone-link':
+        name: 'LLL:EXT:rh_theme/Resources/Private/Language/de.locallang_be.xlf:TCEFORM.tt_content.a_class.phone-link'
+    'phone-link btn btn-primary':
+        name: 'LLL:EXT:rh_theme/Resources/Private/Language/de.locallang_be.xlf:TCEFORM.tt_content.a_class.phone-link_btn_btn-primary'
+    'phone-link btn btn-secondary':
+        name: 'LLL:EXT:rh_theme/Resources/Private/Language/de.locallang_be.xlf:TCEFORM.tt_content.a_class.phone-link_btn_btn-secondary'
+    'phone-link btn btn-outline-primary':
+        name: 'LLL:EXT:rh_theme/Resources/Private/Language/de.locallang_be.xlf:TCEFORM.tt_content.a_class.phone-link_btn_btn-outline-primary'
+    'phone-link btn btn-outline-secondary':
+        name: 'LLL:EXT:rh_theme/Resources/Private/Language/de.locallang_be.xlf:TCEFORM.tt_content.a_class.phone-link_btn_btn-outline-secondary'

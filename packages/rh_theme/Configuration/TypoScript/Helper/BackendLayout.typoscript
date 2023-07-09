@@ -1,0 +1,85 @@
+#  <f:cObject typoscriptObjectPath="lib.BackendLayout" />
+lib.BackendLayout = COA
+lib.BackendLayout {
+    10 = TEXT
+    10 {
+        data = levelfield:-2, backend_layout_next_level, slide
+        override.data = TSFE:page|backend_layout
+        split {
+            token = pagets__
+            1.current = 1
+            1.wrap = |
+        }
+    }
+    ifEmpty = Default
+}
+
+# <f:cObject typoscriptObjectPath="lib.FluidView" />
+lib.FluidView = COA
+lib.FluidView {
+    10 = TEXT
+    10 {
+        data = levelfield:-2, tx_rh_theme_layout_fluid_view_next_level, slide
+        override.data = field:tx_rh_theme_layout_fluid_view
+    }
+    ifEmpty =
+}
+
+# <f:cObject typoscriptObjectPath="lib.ColumnSplit" />
+lib.ColumnSplit = COA
+lib.ColumnSplit {
+    10 = TEXT
+    10 {
+        data = levelfield:-2, tx_rh_theme_layout_column_split_next_level, slide
+        override.data = field:tx_rh_theme_layout_column_split
+    }
+    ifEmpty =
+}
+
+# <f:cObject typoscriptObjectPath="lib.ColumnOrder" />
+lib.ColumnOrder = COA
+lib.ColumnOrder {
+    10 = TEXT
+    10 {
+        data = field:tx_rh_theme_layout_column_order
+    }
+    ifEmpty = 0
+}
+
+# if current colPos > beLayout colPos (0-3), use parent colPos for gutter condition
+# <f:cObject typoscriptObjectPath="lib.BELayoutColPosParent" data="{colPos:data.colPos, ceUid:data.uid}" />
+// lib.BELayoutColPosParent = COA
+// lib.BELayoutColPosParent {
+
+//     if.value = 10
+//     if.isGreaterThan.field = colPos
+
+//     5 = LOAD_REGISTER
+//     5 {
+//         colPos.cObject = TEXT
+//         colPos.cObject {
+//             field = colPos
+//         }
+//         ceUidParent.cObject = TEXT
+//         ceUidParent.cObject {
+//             data = DB:tt_content:{field:ceUid}:tx_container_parent
+//             data.insertData = 1
+//         }
+//         colPosParent.cObject = TEXT
+//         colPosParent.cObject {
+//             data = DB:tt_content:{register:ceUidParent}:colPos
+//             data.insertData = 1
+//         }
+//     }
+
+//     10 = TEXT
+//     10.if {
+//         // if parent has parent, return false
+//         value = 10
+//         isLessThan.data = register:colPosParent
+//     }
+//     10.data = register:colPosParent
+
+//     90 = RESTORE_REGISTER
+
+// }

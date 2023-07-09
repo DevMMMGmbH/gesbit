@@ -1,0 +1,508 @@
+@import 'base';
+
+body{
+    background-image:url("#{$imgPath}/Farbbalken_1.png") !important;
+    background-repeat:no-repeat !important;
+    background-position:center 335px !important;
+    background-size:auto 190px !important;
+}
+
+
+#main {
+
+    .csc-textpic.ce-above{
+	width:304px;
+	float:left;
+	margin-right:24px;
+
+	.csc-textpic-imagewrap .csc-textpic-image {
+	    margin-bottom: 0;
+	}
+
+	.csc-textpic-text{
+	    height:135px;
+	    position:relative;
+	    font-size:30px;
+	    line-height:34px;
+	    font-family:"roboto_condensedregular";
+	    background:$rot;
+
+	    p{
+		display:block;
+		position:absolute;
+
+		left:16px;
+		right:16px;
+		bottom:16px;
+
+
+		a{
+		    color:#fff;
+		    text-decoration:none;
+		    display:block;
+		}
+	    }
+	}
+    }
+
+
+    .csc-frame-default:nth-child(1) .csc-textpic{
+	.csc-textpic-text{
+	    background:$hellblau;
+	}
+    }
+
+
+    .csc-frame-default:nth-child(3) .csc-textpic{
+	margin-right:0;
+
+	.csc-textpic-text{
+	    background:$gruen;
+	}
+    }
+
+    #startteaser {
+        img {
+            width: 304px !important;
+            height: 190px !important;
+        }
+        .csc-textpic-text {
+            margin-top: -4px;
+        }
+    }
+
+    #content{
+	clear:both;
+	padding-top:24px;
+
+	#left{
+	    #leftcontent{
+		.csc-frame-default:first-child{
+		    background:$hellgrau;
+		    padding:18px;
+		    margin-bottom:24px;
+
+		    .article{
+			margin-bottom:0px;
+		    }
+
+		    h2{
+			font-family:"roboto_condensedregular";
+			font-size:2.1538em;
+			line-height:1em;
+			color:$schriftgrau;
+			margin-bottom:20px;
+			float:left;
+		    }
+
+		    .news-list-date{
+			font-family:"robotoregular";
+			color:$schriftgrau;
+			font-size:0.875em;
+			line-height:2.7em;
+			float:left;
+			margin-right:12px;
+			clear:both;
+		    }
+
+		    .showAll{
+			float:right;
+			margin-top:10px;
+			font-size:1em;
+		    }
+
+		    h3{
+			font-family:"robotoregular";
+			font-size:1.2857em;
+			line-height:1.6667em;
+			float:left;
+			margin-bottom:0;
+		    }
+		}
+	    }
+
+	}
+
+	.csc-frame-default:nth-child(2){
+	    padding:18px;
+	    border:1px solid #666;
+
+	    h2{
+		float:left;
+		font-family:"roboto_condensedregular";
+		font-size:2.1538em;
+		line-height:1em;
+		color:$schriftgrau;
+		margin-bottom:18px;
+	    }
+
+	    .showAll{
+		float:right;
+		margin-top:10px;
+		font-size:1em;
+	    }
+
+	    .article{
+		clear:both;
+		border-bottom:1px solid #666;
+		margin-bottom:18px;
+		padding-bottom:18px;
+
+		p{
+		    margin-bottom:0;
+		}
+
+		.news-img-wrap{
+		    float:left;
+		    margin-right:18px;
+
+		    img{
+			width:124px;
+			height:auto;
+		    }
+		}
+
+		.news-text-wrap{
+		    display:block;
+		    float:left;
+		    width:452px;
+
+		}
+
+
+		h3{
+		    font-family:"robotoregular";
+		    font-size:1.2857em;
+		    line-height:1.4444em;
+
+		    margin-bottom:0;
+		}
+
+		.news-date-wrap{
+		    color:$schriftgrau;
+		    font-size:0.9285em;
+		}
+	    }
+
+	    .article:last-child{
+		border-bottom:none;
+		margin-bottom:0;
+		padding-bottom:0;
+
+	    }
+	}
+	#right{
+	    font-size:1em;
+	    line-height:1.4285em;
+
+	    .news {
+		background:none;
+		margin-bottom:0;
+		padding:0;
+	    }
+
+
+	    .csc-frame-default{
+		background:$hellgrau;
+		padding:18px;
+
+		h2{
+		    font-family:"roboto_condensedregular";
+		    font-size:2.1428em;
+		    line-height:1em;
+		    color:$schriftgrau;
+		    margin-bottom:18px;
+		    border-bottom:none;
+		    float:left;
+		}
+
+		.article{
+		    margin-bottom:24px;
+
+		    h3{
+			font-family:"robotoregular";
+			font-size:1.1428em;
+			line-height:1.4em;
+			margin-bottom:0;
+		    }
+
+		    .news-date-wrap{
+			color:$schriftgrau;
+			font-size:0.9285em;
+
+		    }
+
+		    p.bodytext{
+			margin-bottom:0;
+		    }
+		}
+
+		.article:last-child{
+		    border-bottom:none;
+		    margin-bottom:0;
+		    padding-bottom:0;
+
+		}
+
+	    }
+	}
+    }
+
+}
+
+/* Smartphones */
+@media (max-width: 767px) {
+
+    body{
+	background-image:none !important;
+    }
+
+    .smartrssicon{
+	display:none;
+    }
+
+
+    #main{
+	.csc-textpic-imagewrap {
+	    display:none;
+	}
+
+	.csc-textpic{
+	    height:auto;
+	    width:100%;
+	    float:none;
+	    margin-right:0;
+	    margin-bottom:7px;
+
+	    .csc-textpic-text {
+
+		height:auto;
+		padding:14px;
+		p {
+		    position: static;
+		}
+	    }
+
+	}
+
+	#content{
+	    padding-top:0;
+
+	    #left{
+
+		#leftcontent{
+		    padding:0;
+
+		    /* Aus der Gesbit */
+
+		    .csc-frame-default:first-child {
+			position:relative;
+			padding:14px 14px 28px 14px;
+			margin-bottom:0;
+
+			.news-list-date {
+			    line-height:1em;
+			    margin-top:7px;
+			}
+
+			.header{
+
+			    h3{
+				line-height:1.25em;
+				float:none;
+			    }
+			}
+
+			.showAll {
+			    float: none;
+			    font-size: 1em;
+			    margin-top: 0;
+			    position:absolute;
+			    bottom:10px;
+			    left:14px;
+			}
+
+		    }
+
+		    /* Blog */
+
+
+		    .csc-frame-default:nth-child(2){
+			position:relative;
+			border:none;
+			padding: 14px 14px 58px 14px;
+
+
+			.showAll {
+			    float: none;
+			    font-size: 1em;
+			    margin-top: 0;
+			    position:absolute;
+			    bottom:10px;
+			    left:14px;
+			}
+
+			.article{
+			    .news-img-wrap{
+				float:none;
+				margin-right:0;
+
+				img {
+				    height: auto;
+				    width: 100%;
+				}
+			    }
+			    .news-text-wrap {
+				display: block;
+				float: none;
+				width: 100%;
+
+			    }
+			}
+		    }
+		}
+	    }
+
+	    /* Nachrichten */
+	    #right{
+		margin-top:12px;
+
+		.news{
+		    padding:0;
+		    margin:0;
+		}
+
+		.csc-frame-default {
+		    padding:14px;
+		}
+	    }
+
+	}
+    }
+}
+/* Tablet Portrait */
+@media (min-width:768px) and (max-width: 979px) {
+
+    body{
+	background-image:none !important;
+    }
+
+    .smartrssicon{
+	display:block;
+	height:57px;
+	width:57px;
+margin: 30px 0 0 30px;
+    width: 57px;
+    float:left;
+    }
+
+    #main{
+	.csc-textpic-imagewrap {
+	    display:none;
+	}
+
+	.csc-textpic{
+	    height:auto;
+	    width:100%;
+	    float:none;
+	    margin-right:0;
+	    margin-bottom:7px;
+
+	    .csc-textpic-text {
+		height:auto;
+		padding:14px;
+		p {
+		    position: static;
+		}
+	    }
+
+	}
+
+
+	#content{
+	    padding-top:0;
+
+	    #left{
+
+		#leftcontent{
+		    padding:0;
+
+		    /* Aus der Gesbit */
+
+		    .csc-frame-default:first-child {
+			position:relative;
+			padding:14px 14px 28px 14px;
+			margin-bottom:0;
+
+			.news-list-date {
+			    line-height:1em;
+			    margin-top:7px;
+			}
+
+			.header{
+
+			    h3{
+				line-height:1.25em;
+				float:none;
+			    }
+			}
+
+			.showAll {
+
+			    font-size: 1em;
+
+			}
+
+		    }
+
+		    /* Blog */
+
+
+		    .csc-frame-default:nth-child(2){
+			position:relative;
+			border:none;
+			padding: 14px 14px 58px 14px;
+
+
+			.showAll {
+
+			    font-size: 1em;
+
+			}
+
+			.article{
+			    .news-img-wrap{
+
+
+				img {
+
+				}
+			    }
+			    .news-text-wrap {
+				display: block;
+				float: none;
+				width: 100%;
+
+			    }
+			}
+		    }
+		}
+	    }
+
+	    /* Nachrichten */
+	    #right{
+		margin-top:12px;
+
+		.news{
+		    padding:0;
+		    margin:0;
+		}
+
+		.csc-frame-default {
+		    padding:14px;
+		}
+	    }
+
+	}
+    }
+}

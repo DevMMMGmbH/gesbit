@@ -1,0 +1,7 @@
+@import 'base';
+body{
+    background-image:url("#{$imgPath}/bg_linie_hellblau.png"),url("#{$imgPath}/Farbbalken_1.png") !important;
+    background-repeat: repeat-x, no-repeat !important;
+    background-position: left 192px,center 241px !important;
+    background-size:1px 7px,auto 190px !important;
+}

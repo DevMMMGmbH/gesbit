@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+    <file source-language="en" datatype="plaintext" original="messages" date="2016-07-18T21:20:42Z"
+          product-name="men_gesbit">
+        <header/>
+        <body>
+            <trans-unit id="tx_men_gesbit_gender.I.0" xml:space="preserve">
+                <source>Herr</source>
+            </trans-unit>
+			<trans-unit id="tx_men_gesbit_gender.I.1" xml:space="preserve">
+                <source>Frau</source>
+            </trans-unit>
+			<trans-unit id="tx_men_gesbit_gender" xml:space="preserve">
+                <source>Anrede</source>
+            </trans-unit>
+			<trans-unit id="tx_men_gesbit_projekt" xml:space="preserve">
+                <source>Projekt</source>
+            </trans-unit>
+			<trans-unit id="tx_men_gesbit_traeger" xml:space="preserve">
+                <source>Träger/Institution</source>
+            </trans-unit>
+            <trans-unit id="message_tx_men_gesbit_projekt" xml:space="preserve">
+                <source>message_tx_men_gesbit_projekt</source>
+            </trans-unit>
+			<trans-unit id="message_malformed_tx_men_gesbit_projekt" xml:space="preserve">
+                <source>message_malformed_tx_men_gesbit_projekt</source>
+            </trans-unit>
+		</body>
+	</file>
+</xliff>

@@ -1,0 +1,146 @@
+{namespace events=GeorgRinger\Eventnews\ViewHelpers}{namespace n=GeorgRinger\News\ViewHelpers}
+<f:layout name="General" />
+
+<f:section name="content">
+
+    <f:if condition="{settings.templateLayout} == 86">
+        <f:then>
+            <!-- Calender right -->
+            <div class="calendar">
+                <!-- <h2>
+    				<f:translate key="calendar" extensionName="eventnews" />
+    			</h2> -->
+                <events:calendar newsList="{news}" demand="{demand}" firstDayOfWeek="1">
+                    <div class="table-responsive">
+                        <table class="table">
+                            <tr class="title">
+                                <th colspan="7" class="title">
+                                    <f:link.page class="previous" rel="nofollow" pageUid="{currentPageId}" additionalParams="{tx_news_pi1:{overwriteDemand:{month:previousMonthData.month,year:previousMonthData.year}}}">
+                                        ◀
+                                    </f:link.page>
+                                    {f:format.date(date:currentMonthData.date,format:'%B %Y')}
+                                    <f:link.page rel="nofollow" class="next" pageUid="{currentPageId}" additionalParams="{tx_news_pi1:{overwriteDemand:{month:nextMonthData.month,year:nextMonthData.year}}}">
+                                         ▶
+                                    </f:link.page>
+                                </th>
+                            </tr>
+                            <tr class="days">
+                                <f:for each="{weeks.0}" as="day">
+                                    <th>
+                                        {f:format.date(date: day.ts, format: '%a')}
+
+                                    </th>
+                                </f:for>
+                            </tr>
+                            <f:for each="{weeks}" as="week">
+                                <tr>
+                                    <f:for each="{week}" as="day">
+                                        <f:render section="calday" arguments="{day:day, settings:settings}"></f:render>
+                                    </f:for>
+                                </tr>
+                            </f:for>
+                        </table>
+                    </div>
+                </events:calendar>
+            </div>
+        </f:then>
+        <f:else>
+            <div>
+                <events:calendar newsList="{news}" demand="{demand}" firstDayOfWeek="1">
+                    <ul class="pager">
+                        <li class="previous">
+                            <f:link.page title="vorheriger Monat" rel="nofollow" pageUid="{currentPageId}" additionalParams="{tx_news_pi1:{overwriteDemand:{month:previousMonthData.month,year:previousMonthData.year}}}">
+                                &lt;&lt;
+                            </f:link.page>
+                        </li>
+                        <li>{f:format.date(date:currentMonthData.date,format:'%B %Y')}</li>
+                        <li class="next">
+                            <f:link.page title="folgender Monat" rel="nofollow" pageUid="{currentPageId}" additionalParams="{tx_news_pi1:{overwriteDemand:{month:nextMonthData.month,year:nextMonthData.year}}}">
+                                &gt;&gt;
+                            </f:link.page>
+                        </li>
+                    </ul>
+                </events:calendar>
+            </div>
+            <div>
+                <div class="news-list-view">
+                    <f:for each="{news}" as="n">
+                        <f:if condition="{overwriteDemand.day}">
+                            <f:then>
+                                <events:dayCompare newsItem="{n}" demand="{demand}">
+                                    <f:then>
+                                        <f:render section="listItem" arguments="{_all}" />
+                                    </f:then>
+                                </events:dayCompare>
+                            </f:then>
+                            <f:else>
+                                <f:render section="listItem" arguments="{_all}" />
+                            </f:else>
+                        </f:if>
+                    </f:for>
+                </div>
+            </div>
+        </f:else>
+    </f:if>
+</f:section>
+
+<f:section name="listItem">
+    <div class="article">
+        <div class="news-date-wrap">
+            {f:format.date(date:n.datetime,format:'%d.%m.%Y')}
+
+            <f:if condition="{n.eventEnd}">
+                &nbsp;-&nbsp;{f:format.date(date:n.eventEnd,format:'%d.%m.%Y')}
+            </f:if>
+        </div>
+        <h2>
+            <n:link newsItem="{n}" settings="{settings}">{n.title}</n:link>
+        </h2>
+        <f:if condition="{n.teaser}">
+            <f:then>
+                <span itemprop="description">{n.teaser -> f:format.crop(maxCharacters: '{settings.cropMaxCharacters}', respectWordBoundaries:'1') -> f:format.html()}</span>
+            </f:then>
+            <f:else>
+                <span itemprop="description">{n.bodytext -> f:format.crop(maxCharacters: '{settings.cropMaxCharacters}', respectWordBoundaries:'1') -> f:format.html()}</span>
+            </f:else>
+        </f:if>
+        <n:link class="more" newsItem="{n}" settings="{settings}">mehr</n:link>
+    </div>
+</f:section>
+
+<f:section name="calday">
+    <td class="day{f:format.date(date: day.ts, format: 'N')} {f:if(condition: day.curmonth, then: 'curmonth', else: 'othermonth')}{f:if(condition: day.news, then: ' hasevents')}{f:if(condition: day.curday, then: ' today')}{f:if(condition: day.startevent, then: ' startev')}{f:if(condition: day.endevent, then: ' endev')}">
+        <f:if condition="{day.news}">
+            <f:then>
+                <f:if condition="{day.curmonth} == FALSE">
+                    <f:then>
+                        <div class="dateNotInMonth" onmouseover="$('div.newsItemNotInMonth-{day.day}').show();" onmouseout="$('div.newsItemNotInMonth-{day.day}').hide();">{day.day}</div>
+                        <div id="newsItemNotInMonth">
+                            <div class="newsItemNotInMonth newsItemNotInMonth-{day.day}" onmouseover="$('div.newsItemNotInMonth-{day.day}').show();" onmouseout="$('div.newsItemNotInMonth-{day.day}').hide();">
+                                <f:for each="{day.news}" as="newsItem">
+                                    <n:link newsItem="{newsItem}" settings="{settings}">{newsItem.title}</n:link>
+                                </f:for>
+                            </div>
+                        </div>
+                    </f:then>
+                </f:if>
+                <f:if condition="{day.curmonth} == TRUE">
+                    <f:then>
+                        <div class="dateInMonth" onmouseover="$('div.newsItemInMonth-{day.day}').show();" onmouseout="$('div.newsItemInMonth-{day.day}').hide();">{day.day}</div>
+                        <div id="newsItemsInMonth">
+                            <div class="newsItemInMonth newsItemInMonth-{day.day}" onmouseover="$('div.newsItemInMonth-{day.day}').show();" onmouseout="$('div.newsItemInMonth-{day.day}').hide();">
+                                <f:for each="{day.news}" as="newsItem">
+                                    <n:link newsItem="{newsItem}" settings="{settings}">{newsItem.title}</n:link>
+                                    <hr class="calender-onmouseover-event-hr"/>
+                                </f:for>
+                            </div>
+                        </div>
+                    </f:then>
+                </f:if>
+            </f:then>
+            <f:else>
+                {day.day}
+            </f:else>
+        </f:if>
+    </td>
+</f:section>

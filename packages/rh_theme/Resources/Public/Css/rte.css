@@ -1,0 +1,207 @@
+*{
+    margin:0;
+    padding:0;
+    border:none;
+}
+/* Fonts */
+
+
+@font-face {
+    font-family: 'DINEngschriftStd';
+    src: url('../Fonts/310138_0_0.eot');
+    src: url('../Fonts/310138_0_0.eot?#iefix') format('embedded-opentype'),
+    url('../Fonts/310138_0_0.woff2') format('woff2'),
+    url('../Fonts/310138_0_0.woff') format('woff'),
+    url('../Fonts/310138_0_0.ttf') format('truetype');
+}
+
+
+@font-face {
+    font-family: 'robotoregular';
+    src: url('../Fonts/roboto_regular_macroman/Roboto-Regular-webfont.eot');
+    src: url('../Fonts/roboto_regular_macroman/Roboto-Regular-webfont.eot?#iefix') format('embedded-opentype'),
+    url('../Fonts/roboto_regular_macroman/Roboto-Regular-webfont.woff') format('woff'),
+    url('../Fonts/roboto_regular_macroman/Roboto-Regular-webfont.ttf') format('truetype'),
+    url('../Fonts/roboto_regular_macroman/Roboto-Regular-webfont.svg#robotoregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'roboto_condensedregular';
+    src: url('../Fonts/roboto_condensed_macroman/RobotoCondensed-Regular-webfont.eot');
+    src: url('../Fonts/roboto_condensed_macroman/RobotoCondensed-Regular-webfont.eot?#iefix') format('embedded-opentype'),
+    url('../Fonts/roboto_condensed_macroman/RobotoCondensed-Regular-webfont.woff') format('woff'),
+    url('../Fonts/roboto_condensed_macroman/RobotoCondensed-Regular-webfont.ttf') format('truetype'),
+    url('../Fonts/roboto_condensed_macroman/RobotoCondensed-Regular-webfont.svg#roboto_condensedregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'roboto_condensedbold';
+    src: url('../Fonts/roboto_boldcondensed_macroman/RobotoCondensed-Bold-webfont.eot');
+    src: url('../Fonts/roboto_boldcondensed_macroman/RobotoCondensed-Bold-webfont.eot?#iefix') format('embedded-opentype'),
+    url('../Fonts/roboto_boldcondensed_macroman/RobotoCondensed-Bold-webfont.woff') format('woff'),
+    url('../Fonts/roboto_boldcondensed_macroman/RobotoCondensed-Bold-webfont.ttf') format('truetype'),
+    url('../Fonts/roboto_boldcondensed_macroman/RobotoCondensed-Bold-webfont.svg#roboto_condensedbold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'robotomedium';
+    src: url('../Fonts/roboto_medium_macroman/Roboto-Medium-webfont.eot');
+    src: url('../Fonts/roboto_medium_macroman/Roboto-Medium-webfont.eot?#iefix') format('embedded-opentype'),
+    url('../Fonts/roboto_medium_macroman/Roboto-Medium-webfont.woff') format('woff'),
+    url('../Fonts/roboto_medium_macroman/Roboto-Medium-webfont.ttf') format('truetype'),
+    url('../Fonts/roboto_medium_macroman/Roboto-Medium-webfont.svg#robotomedium') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'robotobold';
+    src: url('../Fonts/roboto_bold_macroman/Roboto-Bold-webfont.eot');
+    src: url('../Fonts/roboto_bold_macroman/Roboto-Bold-webfont.eot?#iefix') format('embedded-opentype'),
+    url('../Fonts/roboto_bold_macroman/Roboto-Bold-webfont.woff') format('woff'),
+    url('../Fonts/roboto_bold_macroman/Roboto-Bold-webfont.ttf') format('truetype'),
+    url('../Fonts/roboto_bold_macroman/Roboto-Bold-webfont.svg#robotobold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
+body.htmlarea-content-body{
+    font-family: 'robotoregular';
+    font-size:14px;
+    color:#000;
+    line-height:20px;
+}
+
+
+p{
+    margin-bottom:20px;
+}
+
+h1{
+    font-family:"robotomedium";
+    font-size:24px;
+    line-height:1.2em;
+    margin-bottom:20px;
+}
+
+h2{
+    font-family:"robotomedium";
+    font-size:16px;
+    line-height:24px;
+    margin-bottom:13px;
+}
+
+h3{
+    font-family:"robotomedium";
+    font-size:14px;
+    line-height:20px;
+    margin-bottom:20px;
+}
+
+b{
+    font-family: 'robotomedium';
+}
+
+a{
+    color:#42768c;
+    text-decoration:none;
+}
+
+
+	a.internal-link{
+	    background:url("../Img/Link_Pfeil_rechts.png") no-repeat left 2px/8px 12px;
+	    padding-left:13px;
+	}
+
+	a.external-link-new-window{
+	    background:url("../Img/link_extern.png") no-repeat left 2px/15px 13px;
+	    padding-left:20px;
+	}
+
+	a.mail{
+	    background:url("../Img/link_mail.png") no-repeat left 2px/16px 13px;
+	    padding-left:21px;
+	}
+
+a:hover{
+    text-decoration:underline;
+}
+
+h1 a, h2 a, h3 a{
+    background:none;
+    padding-left:none;
+}	
+
+ul,ol{
+    
+    line-height:20px;
+    margin-bottom:20px;
+
+}
+
+ul{
+    list-style-type:none;
+}
+
+ul li{
+    padding:0 0 0 10px;
+    background:url("../Img/Liste_Bullet.png") no-repeat left 8px/5px 5px;
+}
+
+
+ol{
+    padding-left:20px;
+}
+
+
+
+/* RTE-Tabelle */
+
+table{
+    border-collapse:collapse;
+    margin-bottom:20px;
+}
+
+table caption{
+    display:none;
+}
+
+table th,
+table td{
+    vertical-align:top;
+}
+
+table th{
+    padding:0 10px 16px 0;
+    text-align:left;
+    font-family:"robotomedium";
+    font-size:14px;
+    line-height:17px;
+
+}
+
+table td{
+    padding:16px 10px 16px 0;
+    border-top:1px solid #42768c;
+    font-size:14px;
+    line-height:20px;
+
+}
+
+div.weiterlesen {
+  border: 1px dotted black;
+  background: #efe;
+}

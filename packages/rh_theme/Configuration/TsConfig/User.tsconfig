@@ -1,0 +1,17 @@
+[backend.user.isAdmin]
+    admPanel {
+        enable.all = 0
+        override {
+            tsdebug.forceTemplateParsing = 0
+            override.cache.noCache = 0
+        }
+    }
+    options {
+        pageTree.showPageIdWithTitle = 1
+        pageTree.showNavTitle = 1
+    }
+[END]
+
+
+options.pageTree.showPageIdWithTitle = 1
+setup.override.edit_docModuleUpload = 0

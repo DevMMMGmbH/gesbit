@@ -1,0 +1,20 @@
+plugin.tx_news {
+  view {
+    templateRootPath = EXT:rh_theme/Resources/Private/Extensions/News/Templates/
+    partialRootPath = EXT:rh_theme/Resources/Private/Extensions/News/Partials/
+    layoutRootPath = EXT:rh_theme/Resources/Private/Extensions/News/Layouts/
+  }
+}
+
+plugin.tx_news.settings.cssFile >
+
+plugin.tx_cbnewscal.settings.firstDayOfWeek = 1
+
+
+plugin.tx_cbnewscal {
+	view {
+
+		partialRootPath = EXT:rh_theme/Resources/Private/Extensions/cb_newscal/Partials/
+
+	}
+}

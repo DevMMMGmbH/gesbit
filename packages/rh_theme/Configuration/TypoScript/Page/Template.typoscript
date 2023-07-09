@@ -1,0 +1,36 @@
+page {
+    typeNum = 0
+    bodyTagCObject = TEXT
+    bodyTagCObject.dataWrap = <body id="uid_{field:uid}|" class="pid_{field:pid}">
+    10 = FLUIDTEMPLATE
+    10 {
+        settings.rh_theme < page.rh_theme
+        templateName = TEXT
+        templateName {
+            cObject = TEXT
+            cObject {
+                data = pagelayout
+                required = 1
+                case = uppercamelcase
+                split {
+                    token = pagets__
+                    cObjNum = 1
+                    1.current = 1
+                }
+            }
+            ifEmpty = Default
+        }
+        templateRootPaths {
+            0 = EXT:rh_theme/Resources/Private/Templates/Page/
+            1 = {$page.fluidtemplate.templateRootPath}
+        }
+        partialRootPaths {
+            0 = EXT:rh_theme/Resources/Private/Partials/Page/
+            1 = {$page.fluidtemplate.partialRootPath}
+        }
+        layoutRootPaths {
+            0 = EXT:rh_theme/Resources/Private/Layouts/Page/
+            1 = {$page.fluidtemplate.layoutRootPath}
+        }
+    }
+}

@@ -1,0 +1,43 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+<f:if condition="{data.pid} == 1 && {data.colPos} == 1">
+    <f:then>
+        <f:media class="image-embed-item" file="{file}" width="304" height="{dimensions.height}" alt="{file.alternative}" title="{file.title}" loading="{settings.media.lazyLoading}" decoding="{settings.media.imageDecoding}" />
+    </f:then>
+    <f:else if="{data.colPos} == 0">
+        <f:if condition="{dimensions.width} > 608">
+            <f:then>
+                <f:media class="image-embed-item" file="{file}" width="608" height="{dimensions.height}" alt="{file.alternative}" title="{file.title}" loading="{settings.media.lazyLoading}" decoding="{settings.media.imageDecoding}" />
+            </f:then>
+            <f:else>
+                <f:media class="image-embed-item" file="{file}" width="{dimensions.width}" height="{dimensions.height}" alt="{file.alternative}" title="{file.title}" loading="{settings.media.lazyLoading}" decoding="{settings.media.imageDecoding}" />
+            </f:else>
+        </f:if>
+    </f:else>
+    <f:else if="{data.colPos} == 2">
+        <f:switch expression="{colCount}">
+            <f:case value="2">
+                <f:variable name="imgWidth">
+                    <f:if condition="{dimensions.width} > 140">
+                        <f:then>140</f:then>
+                        <f:else>{dimensions.width}</f:else>
+                    </f:if>
+                </f:variable>
+                <f:variable name="imgHeight"></f:variable>
+            </f:case>
+            <f:defaultCase>
+                <f:variable name="imgWidth">
+                    <f:if condition="{dimensions.width} > 304">
+                        <f:then>304</f:then>
+                        <f:else>{dimensions.width}</f:else>
+                    </f:if>
+                </f:variable>
+                <f:variable name="imgHeight"></f:variable>
+            </f:defaultCase>
+        </f:switch>
+        <f:media class="image-embed-item" file="{file}" width="{imgWidth}" height="{imgHeight}" alt="{file.alternative}" title="{file.title}" loading="{settings.media.lazyLoading}" decoding="{settings.media.imageDecoding}" />
+    </f:else>
+    <f:else>
+        <f:media class="image-embed-item" file="{file}" width="{dimensions.width}" height="{dimensions.height}" alt="{file.alternative}" title="{file.title}" loading="{settings.media.lazyLoading}" decoding="{settings.media.imageDecoding}" />
+    </f:else>
+</f:if>
+</html>

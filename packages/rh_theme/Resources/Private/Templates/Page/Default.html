@@ -1,0 +1,32 @@
+<f:layout name="Default" />
+<f:section name="Main">
+    <div id="main">
+        <div id="startteaser">
+            <f:comment>
+                <f:cObject typoscriptObjectPath="lib.startteaser" />
+            </f:comment>
+        </div>
+        <f:cObject typoscriptObjectPath="lib.breadcrumb" />
+        <div id="content">
+            <div id="left">
+                <f:cObject typoscriptObjectPath="lib.mainteaser" />
+                <div id="leftcontent">
+                    <!--TYPO3SEARCH_begin-->
+                    <article>
+                        <f:cObject typoscriptObjectPath="lib.dynamicContent" data="{colPos: '0'}" />
+                    </article>
+                    <!--TYPO3SEARCH_end-->
+                </div>
+            </div>
+            <div id="right">
+                <f:cObject typoscriptObjectPath="lib.subnavi" />
+                <!--TYPO3SEARCH_begin-->
+                <article>
+                    <f:cObject typoscriptObjectPath="lib.dynamicContentSlide" data="{colPos: '2'}" />
+                </article>
+                <!--TYPO3SEARCH_end-->
+            </div>
+            <div style="clear:both"></div>
+        </div>
+    </div>
+</f:section>

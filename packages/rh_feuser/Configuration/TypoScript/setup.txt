@@ -1,0 +1,17 @@
+// config.tx_extbase {
+//     persistence{
+//         classes {
+//             TYPO3\CMS\Extbase\Domain\Model\FrontendUser {
+//                 mapping {
+//                     tableName = fe_users
+//                     columns {
+//                         datenschutz.mapOnProperty = datenschutz
+//                         tx_feuserserw_gender.mapOnProperty = tx_feuserserw_gender
+//                         tx_feuserserw_projekt.mapOnProperty = tx_feuserserw_projekt
+//                         tx_feuserserw_traeger.mapOnProperty = tx_feuserserw_traeger
+//                     }
+//                 }
+//             }
+//         }
+//     }
+// }

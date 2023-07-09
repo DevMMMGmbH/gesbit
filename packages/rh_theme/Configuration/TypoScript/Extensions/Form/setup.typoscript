@@ -1,0 +1,2 @@
+plugin.tx_form.settings.yamlConfigurations.100 = EXT:rh_theme/Configuration/Yaml/Form/setup.yaml
+module.tx_form.settings.yamlConfigurations.100 = EXT:rh_theme/Configuration/Yaml/Form/setup.yaml

@@ -1,0 +1,2 @@
+plugin.tx_onetimeaccount_pi1.cssFile =
+plugin.tx_seminars_pi1.cssFile =

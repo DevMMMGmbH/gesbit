@@ -1,0 +1,25 @@
+TYPO3:
+  CMS:
+    Form:
+      persistenceManager:
+        allowedExtensionPaths:
+          20: EXT:rh_theme/Resources/Private/Extensions/Form/
+        allowSaveToExtensionPaths: true
+        allowDeleteFromExtensionPaths: true
+
+      prototypes:
+        standard:
+          formElementsDefinition:
+            Form:
+              renderingOptions:
+                templateRootPaths:
+                  100: 'EXT:rh_theme/Resources/Private/Extensions/Form/Frontend/Templates/'
+                partialRootPaths:
+                  100: 'EXT:rh_theme/Resources/Private/Extensions/Form/Frontend/Partials/'
+                layoutRootPaths:
+                  100: 'EXT:rh_theme/Resources/Private/Extensions/Form/Frontend/Layouts/'
+                translation:
+                  # Beachte die Schreibweise: 'translationFiles' erst ab TYPO3 v10! Vorher 'translationFile'.
+                  translationFiles:
+                    # Lade deine eigenen Sprachdateien nachfolgend:
+                    20: 'EXT:rh_theme/Resources/Private/Language/locallang_form.xlf'

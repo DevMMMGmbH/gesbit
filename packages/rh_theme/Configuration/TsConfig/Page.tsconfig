@@ -1,0 +1,13 @@
+###########################
+### PageTS for RH Theme ###
+###########################
+
+#
+# BACKENDLAYOUTS
+#
+@import 'EXT:rh_theme/Configuration/TsConfig/BackendLayouts/*.tsconfig'
+
+#
+# TCEFORM
+#
+@import 'EXT:rh_theme/Configuration/TsConfig/TCEFORM/*.tsconfig'

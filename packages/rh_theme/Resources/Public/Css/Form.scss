@@ -1,0 +1,226 @@
+@import 'base';
+.tx-powermail {
+
+
+  form {
+    width:100%;
+    padding:0;
+    box-sizing:border-box;
+  }
+
+  fieldset {
+    border:1px solid #666;
+    padding:24px;
+    margin-bottom:20px;
+    box-sizing:border-box;
+    width:100%;
+  }
+  legend {
+    font-size: 1.2em;
+    //text-indent: -20px;
+    //padding-left: 20px;
+    box-sizing:border-box;
+  }
+  .powermail_fieldwrap {
+    width:100%;
+    height:auto;
+    margin-bottom:20px;
+    box-sizing:border-box;
+    position:relative;
+  }
+  label {
+    clear: both;
+    display: block;
+    //float: left;
+    //width: 150px;
+    line-height: 22px;
+    height: auto;
+    text-indent: -17px;
+    padding-left: 17px;
+    padding-bottom:6px;
+    max-width:100%;
+    box-sizing:border-box;
+  }
+  .powermail_fieldwrap_type_textarea {
+    label {
+      //width: 520px;
+      width:100%;
+    }
+    label.check-label {
+      margin-left:30px;
+      width:auto;
+    }
+  }
+    .powermail_fieldwrap_type_input {
+      label {
+        //width: 200px;
+        width:100%;
+        clear:both;
+        float:left;
+      }
+    .powermail_fieldwrap_type_date {
+      label {
+        //width: 200px;
+        width:100%;
+        clear:both;
+        float:left;
+      }
+    }
+
+  }
+  select{
+    background: #f0f0f0 none repeat scroll 0 0;
+    font-family: "robotoregular";
+    font-size: 1em;
+    height:28px;
+    width:200px;
+    box-sizing:border-box;
+  }
+  textarea {
+    background: #f0f0f0 none repeat scroll 0 0;
+    border: medium none;
+    color: #5a5a5a;
+    font-family: "robotoregular";
+    font-size: 1em;
+    line-height: 22px;
+    padding: 10px;
+    width: 100%;
+    height:500px;
+    box-sizing:border-box;
+  }
+  input {
+    background: #f0f0f0 none repeat scroll 0 0;
+    border: medium none;
+    color: #5a5a5a;
+    font-family: "robotoregular";
+    font-size: 1em;
+    height: 32px;
+    line-height: 22px !important;
+    padding: 5px;
+    width:100%;
+    //max-width: 400px;
+    box-sizing:border-box;
+  }
+  input[type="text"]{
+
+  }
+  input[type="email"]{
+
+  }
+  input[type="tel"]{
+
+  }
+  input[type="url"]{
+
+  }
+  input[type="number"]{
+    width: 70px;
+
+  }
+  input[type="date"]{
+    width: 150px;
+    font-family: "robotoregular";
+    font-size: 1em;
+
+  }
+  input.powermail_date {
+
+  }
+  input[type="submit"]{
+    cursor: pointer;
+    font-family: "roboto_condensedbold";
+    font-size: 1.25em;
+    color: #fff;
+    float: right;
+    padding: 10px;
+    background:$blau;
+    width: 250px;
+    height: 52px;
+  }
+  input[type="reset"]{
+    cursor: pointer;
+    font-family: "roboto_condensedbold";
+    font-size: 1.25em;
+    color: #fff;
+    float:left;
+    background:#f0f0f0;
+    color:#000;
+    width: 250px;
+    height: 52px;
+  }
+  input.check {
+    float: left;
+
+  }
+
+  .error {
+    color: $rot;
+  }
+  .error-datenschutz {
+    margin-left:20px;
+  }
+
+  button.tooltip-button {
+    padding: 5px 10px;
+    font-weight:bold;
+    color: #fff;
+    background-color: $hellblau;
+  }
+  span.tooltip {
+    position:absolute;
+    top:0;
+    left:0;
+    display:block;
+    //display:none;
+    padding:5px;
+    background-color: #fff;
+    border: 1px solid $hellblau;
+  }
+
+}
+
+.powermail_fieldset_1 {}
+
+div.radio {
+  input[type="radio"]{
+    width: auto;
+    float: left;
+    margin-left: -30px;
+  }
+  label {
+    margin-left: 30px;
+    text-indent:0;
+    padding-left:0;
+  }
+}
+span.char-count {
+  display: block;
+  margin-top:-5px;
+  &.ok {
+    padding: 3px 10px;
+    background-color: rgb(187, 237, 189);
+    color: rgb(4, 137, 10);
+  }
+  &.tolong {
+    padding: 3px 10px;
+    background-color:#F2DEDE;
+    color: #A94442;
+  }
+}
+
+.tx-powermail .powermail_fieldset .parsley-errors-list {
+  background-color: #F2DEDE;
+  border: 0px none !important;
+}
+
+li.parsley-custom-error-message {
+  background: none !important;
+}
+
+p.text-required {
+  padding-bottom:20px;
+}
+
+label.formidable-rdrstd-label-radio {
+  padding-right:10px;
+}

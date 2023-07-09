@@ -1,0 +1,2 @@
+
+styles.content.loginform.templateFile = EXT:rh_theme/Resources/Extensions/felogin.html

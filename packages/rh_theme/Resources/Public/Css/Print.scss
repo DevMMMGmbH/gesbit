@@ -1,0 +1,25 @@
+
+#breadcrumb,
+#footer,
+#header #headernaviwrap {
+    display:none;
+}
+
+#main{
+     margin-top:48px;
+
+    #content{
+	font-size:1em !important;	
+
+	#left{
+	    width:95%;
+	    float:none;
+	    margin-right:0;
+	}
+	
+	#right{
+	    width:95%;
+	    float:none;
+	} 
+    }
+}

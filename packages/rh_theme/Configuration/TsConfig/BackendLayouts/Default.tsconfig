@@ -1,0 +1,34 @@
+#
+# BACKENDLAYOUT: DEFAULT
+#
+mod {
+    web_layout {
+        BackendLayouts {
+            default {
+                title = Standard 2 Spalten
+                // icon = EXT:rh_theme/Resources/Public/Backend/Template/Default.svg
+                config {
+                    backend_layout {
+                        colCount = 3
+                        rowCount = 1
+                        rows {
+                            1 {
+                                columns {
+                                    1 {
+                                        name = Inhalt (0)
+                                        colPos = 0
+                                        colspan = 2
+                                    }
+                                    2 {
+                                        name = rechts (2)
+                                        colPos = 2
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

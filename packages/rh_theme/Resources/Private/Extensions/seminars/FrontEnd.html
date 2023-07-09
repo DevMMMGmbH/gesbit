@@ -1,0 +1,640 @@
+<!-- ###MESSAGE_MY_EVENTS### --><p>
+	###LABEL_MYEVENTS###
+</p>
+<!-- ###MESSAGE_MY_EVENTS### -->
+
+<!-- ###MESSAGE_MY_VIP_EVENTS### --><p>
+	###LABEL_MYVIPEVENTS###
+</p>
+<!-- ###MESSAGE_MY_VIP_EVENTS### -->
+
+<!-- ###MESSAGE_MY_ENTERED_EVENTS### --><p>
+	###LABEL_MYENTEREDEVENTS###
+</p>
+<script>document.addEventListener("DOMContentLoaded", TYPO3.seminars.convertActionLinks);</script>
+<!-- ###MESSAGE_MY_ENTERED_EVENTS### -->
+
+<!-- ###LIST_HEADER### --><div class="tx-seminars-pi1-listrow">
+	<table class="contenttable ttt" style="width:100%;">
+		<thead>
+			<tr>
+<!-- ###LISTHEADER_WRAPPER_IMAGE### -->
+				<th scope="col"></th>
+<!-- ###LISTHEADER_WRAPPER_IMAGE### -->
+<!-- ###LISTHEADER_WRAPPER_CATEGORY### -->      <th scope="col">###HEADER_CATEGORY###</th>
+<!-- ###LISTHEADER_WRAPPER_CATEGORY### -->
+<!-- ###LISTHEADER_WRAPPER_TITLE### -->      <th scope="col" class="tx-seminars-pi1-title">###HEADER_TITLE###</th>
+<!-- ###LISTHEADER_WRAPPER_TITLE### --><!-- ###LISTHEADER_WRAPPER_SUBTITLE### -->      <th scope="col">###HEADER_SUBTITLE###</th>
+<!-- ###LISTHEADER_WRAPPER_SUBTITLE### --><!-- ###LISTHEADER_WRAPPER_UID### -->      <th scope="col">###HEADER_UID###</th>
+<!-- ###LISTHEADER_WRAPPER_UID### --><!-- ###LISTHEADER_WRAPPER_EVENT_TYPE### -->      <th scope="col">###HEADER_EVENT_TYPE###</th>
+<!-- ###LISTHEADER_WRAPPER_EVENT_TYPE### --><!-- ###LISTHEADER_WRAPPER_ACCREDITATION_NUMBER### -->      <th scope="col">###HEADER_ACCREDITATION_NUMBER###</th>
+<!-- ###LISTHEADER_WRAPPER_ACCREDITATION_NUMBER### --><!-- ###LISTHEADER_WRAPPER_CREDIT_POINTS### -->      <th scope="col">###HEADER_CREDIT_POINTS###</th>
+<!-- ###LISTHEADER_WRAPPER_CREDIT_POINTS### --><!-- ###LISTHEADER_WRAPPER_TEASER### -->      <th scope="col">&nbsp;</th>
+<!-- ###LISTHEADER_WRAPPER_TEASER### --><!-- ###LISTHEADER_WRAPPER_SPEAKERS### -->      <th scope="col">###HEADER_SPEAKERS###</th>
+<!-- ###LISTHEADER_WRAPPER_SPEAKERS### --><!-- ###LISTHEADER_WRAPPER_LANGUAGE### -->      <th scope="col">###HEADER_LANGUAGE###</th>
+<!-- ###LISTHEADER_WRAPPER_LANGUAGE### --><!-- ###LISTHEADER_WRAPPER_DATE### -->      <th scope="col">###HEADER_DATE###</th>
+<!-- ###LISTHEADER_WRAPPER_DATE### --><!-- ###LISTHEADER_WRAPPER_TIME### -->      <th scope="col">###HEADER_TIME###</th>
+<!-- ###LISTHEADER_WRAPPER_TIME### -->
+<!-- ###LISTHEADER_WRAPPER_EXPIRY### -->      <th scope="col" class="tx-seminars-pi1-expiry">###LABEL_EXPIRY###</th>
+<!-- ###LISTHEADER_WRAPPER_EXPIRY### -->
+<!-- ###LISTHEADER_WRAPPER_PLACE### -->      <th scope="col">###HEADER_PLACE###</th>
+<!-- ###LISTHEADER_WRAPPER_PLACE### -->
+<!-- ###LISTHEADER_WRAPPER_CITY### -->      <th scope="col">###HEADER_CITY###</th>
+<!-- ###LISTHEADER_WRAPPER_CITY### -->
+<!-- ###LISTHEADER_WRAPPER_COUNTRY### -->      <th scope="col">###HEADER_COUNTRY###</th>
+<!-- ###LISTHEADER_WRAPPER_COUNTRY### --><!-- ###LISTHEADER_WRAPPER_SEATS### -->      <th scope="col" class="tx-seminars-pi1-seats">###HEADER_SEATS###</th>
+<!-- ###LISTHEADER_WRAPPER_SEATS### --><!-- ###LISTHEADER_WRAPPER_PRICE_REGULAR### -->      <th scope="col">###HEADER_PRICE_REGULAR###</th>
+<!-- ###LISTHEADER_WRAPPER_PRICE_REGULAR### --><!-- ###LISTHEADER_WRAPPER_PRICE_SPECIAL### -->      <th scope="col">###HEADER_PRICE_SPECIAL###</th>
+<!-- ###LISTHEADER_WRAPPER_PRICE_SPECIAL### --><!-- ###LISTHEADER_WRAPPER_TOTAL_PRICE### -->      <th scope="col" class="tx-seminars-pi1-total-price">###HEADER_TOTAL_PRICE###</th>
+<!-- ###LISTHEADER_WRAPPER_TOTAL_PRICE### --><!-- ###LISTHEADER_WRAPPER_ORGANIZERS### -->      <th scope="col">###HEADER_ORGANIZERS###</th>
+<!-- ###LISTHEADER_WRAPPER_ORGANIZERS### --><!-- ###LISTHEADER_WRAPPER_TARGET_GROUPS### -->      <th scope="col">###HEADER_TARGET_GROUPS###</th>
+<!-- ###LISTHEADER_WRAPPER_TARGET_GROUPS### -->
+<!-- ###LISTHEADER_WRAPPER_ATTACHED_FILES### -->      <th scope="col" class="tx-seminars-pi1-attached-files">###LABEL_ATTACHED_FILES_SHORT###</th>
+<!-- ###LISTHEADER_WRAPPER_ATTACHED_FILES### -->
+<!-- ###LISTHEADER_WRAPPER_VACANCIES### -->      <th scope="col">###HEADER_VACANCIES###</th>
+<!-- ###LISTHEADER_WRAPPER_VACANCIES### -->
+<!-- ###LISTHEADER_WRAPPER_STATUS_REGISTRATION### -->      <th scope="col">###HEADER_STATUS_REGISTRATION###</th>
+<!-- ###LISTHEADER_WRAPPER_STATUS_REGISTRATION### -->
+<!-- ###LISTHEADER_WRAPPER_REGISTRATION### -->      <th scope="col" class="tx-seminars-pi1-registration">###HEADER_REGISTRATION###</th>
+<!-- ###LISTHEADER_WRAPPER_REGISTRATION### --><!-- ###LISTHEADER_WRAPPER_LIST_REGISTRATIONS### -->      <th scope="col" class="tx-seminars-pi1-list-registrations">###HEADER_LIST_REGISTRATIONS###</th>
+<!-- ###LISTHEADER_WRAPPER_LIST_REGISTRATIONS### -->
+<!-- ###LISTHEADER_WRAPPER_STATUS### -->      <th scope="col" class="tx-seminars-pi1-status">###HEADER_STATUS###</th>
+<!-- ###LISTHEADER_WRAPPER_STATUS### -->
+<!-- ###LISTHEADER_WRAPPER_EDIT### -->      <th scope="col" class="tx-seminars-pi1-edit">###LABEL_ACTIONS###</th>
+<!-- ###LISTHEADER_WRAPPER_EDIT### -->
+<!-- ###LISTHEADER_WRAPPER_REGISTRATIONS### -->
+				<th scope="col">###HEADER_REGISTRATIONS###</th>
+<!-- ###LISTHEADER_WRAPPER_REGISTRATIONS### -->
+			</tr>
+		</thead>
+		<tbody>
+<!-- ###LIST_HEADER### -->
+
+<!-- ###LIST_FOOTER### -->    </tbody>
+	</table>
+</div>
+<!-- ###LIST_FOOTER### -->
+
+<!-- ###LIST_ITEM### -->
+			<tr class="###CLASS_ITEMROW###">
+<!-- ###LISTITEM_WRAPPER_IMAGE### -->
+	<td>###IMAGE###</td>
+<!-- ###LISTITEM_WRAPPER_IMAGE### -->
+<!-- ###LISTITEM_WRAPPER_CATEGORY### -->      <td>###CATEGORY###</td>
+<!-- ###LISTITEM_WRAPPER_CATEGORY### -->
+<!-- ###LISTITEM_WRAPPER_TITLE### -->      <td class="tx-seminars-pi1-title"><div class="smartdate">###DATE###</div>###TITLE_LINK###</td>
+<!-- ###LISTITEM_WRAPPER_TITLE### --><!-- ###LISTITEM_WRAPPER_SUBTITLE### -->      <td>###SUBTITLE###</td>
+<!-- ###LISTITEM_WRAPPER_SUBTITLE### --><!-- ###LISTITEM_WRAPPER_UID### -->      <td class="tx-seminars-pi1-uid">###UID###</td>
+<!-- ###LISTITEM_WRAPPER_UID### --><!-- ###LISTITEM_WRAPPER_EVENT_TYPE### -->      <td>###EVENT_TYPE###</td>
+<!-- ###LISTITEM_WRAPPER_EVENT_TYPE### --><!-- ###LISTITEM_WRAPPER_ACCREDITATION_NUMBER### -->      <td>###ACCREDITATION_NUMBER###</td>
+<!-- ###LISTITEM_WRAPPER_ACCREDITATION_NUMBER### --><!-- ###LISTITEM_WRAPPER_CREDIT_POINTS### -->      <td>###CREDIT_POINTS###</td>
+<!-- ###LISTITEM_WRAPPER_CREDIT_POINTS### --><!-- ###LISTITEM_WRAPPER_TEASER### -->      <td>###TEASER###</td>
+<!-- ###LISTITEM_WRAPPER_TEASER### --><!-- ###LISTITEM_WRAPPER_SPEAKERS### -->      <td>###SPEAKERS###</td>
+<!-- ###LISTITEM_WRAPPER_SPEAKERS### -->
+
+<!-- ###LISTITEM_WRAPPER_LANGUAGE### -->      <td>###LANGUAGE###</td>
+<!-- ###LISTITEM_WRAPPER_LANGUAGE### -->
+
+<!-- ###LISTITEM_WRAPPER_DATE### -->      <td class="tx-seminars-pi1-date">###DATE###</td>
+<!-- ###LISTITEM_WRAPPER_DATE### --><!-- ###LISTITEM_WRAPPER_TIME### -->      <td>###TIME###</td>
+<!-- ###LISTITEM_WRAPPER_TIME### -->
+<!-- ###LISTITEM_WRAPPER_EXPIRY### -->      <td class="tx-seminars-pi1-expiry">###EXPIRY###</td>
+<!-- ###LISTITEM_WRAPPER_EXPIRY### -->
+<!-- ###LISTITEM_WRAPPER_PLACE### -->      <td>###PLACE###</td>
+<!-- ###LISTITEM_WRAPPER_PLACE### -->
+<!-- ###LISTITEM_WRAPPER_CITY### -->      <td>###CITY###</td>
+<!-- ###LISTITEM_WRAPPER_CITY### -->
+<!-- ###LISTITEM_WRAPPER_COUNTRY### -->      <td>###COUNTRY###</td>
+<!-- ###LISTITEM_WRAPPER_COUNTRY### --><!-- ###LISTITEM_WRAPPER_SEATS### -->      <td class="tx-seminars-pi1-seats">###SEATS###</td>
+<!-- ###LISTITEM_WRAPPER_SEATS### --><!-- ###LISTITEM_WRAPPER_PRICE_REGULAR### -->      <td class="tx-seminars-pi1-price">###PRICE_REGULAR###</td>
+<!-- ###LISTITEM_WRAPPER_PRICE_REGULAR### --><!-- ###LISTITEM_WRAPPER_PRICE_SPECIAL### -->      <td class="tx-seminars-pi1-price">###PRICE_SPECIAL###</td>
+<!-- ###LISTITEM_WRAPPER_PRICE_SPECIAL### --><!-- ###LISTITEM_WRAPPER_TOTAL_PRICE### -->      <td>###TOTAL_PRICE###</td>
+<!-- ###LISTITEM_WRAPPER_TOTAL_PRICE### --><!-- ###LISTITEM_WRAPPER_ORGANIZERS### -->      <td>###ORGANIZERS###</td>
+<!-- ###LISTITEM_WRAPPER_ORGANIZERS### --><!-- ###LISTITEM_WRAPPER_TARGET_GROUPS### -->      <td>###TARGET_GROUPS###</td>
+<!-- ###LISTITEM_WRAPPER_TARGET_GROUPS### -->
+<!-- ###LISTITEM_WRAPPER_ATTACHED_FILES### -->      <td>###ATTACHED_FILES###</td>
+<!-- ###LISTITEM_WRAPPER_ATTACHED_FILES### -->
+<!-- ###LISTITEM_WRAPPER_VACANCIES### -->      <td class="tx-seminars-pi1-vacancies###CLASS_LISTVACANCIES###"><span class="desktoponly">###VACANCIES###&nbsp;&nbsp;</span><span class="tx-seminars-pi1-square">&nbsp;&nbsp;&nbsp;&nbsp;</span></td>
+<!-- ###LISTITEM_WRAPPER_VACANCIES### -->
+<!-- ###LISTITEM_WRAPPER_STATUS_REGISTRATION### -->      <td>###STATUS_REGISTRATION###</td>
+<!-- ###LISTITEM_WRAPPER_STATUS_REGISTRATION### -->
+<!-- ###LISTITEM_WRAPPER_REGISTRATION### -->      <td>###REGISTRATION###</td>
+<!-- ###LISTITEM_WRAPPER_REGISTRATION### --><!-- ###LISTITEM_WRAPPER_LIST_REGISTRATIONS### -->      <td>###LIST_REGISTRATIONS###</td>
+<!-- ###LISTITEM_WRAPPER_LIST_REGISTRATIONS### -->
+<!-- ###LISTITEM_WRAPPER_STATUS### -->      <td>###STATUS###</td>
+<!-- ###LISTITEM_WRAPPER_STATUS### -->
+<!-- ###LISTITEM_WRAPPER_EDIT### -->      <td>###EDIT###</td>
+<!-- ###LISTITEM_WRAPPER_EDIT### -->
+<!-- ###LISTITEM_WRAPPER_REGISTRATIONS### -->
+				<td>###REGISTRATIONS###</td>
+<!-- ###LISTITEM_WRAPPER_REGISTRATIONS### -->
+			</tr>
+<!-- ###LIST_ITEM### -->
+
+<!-- ###ATTACHED_FILES_LIST_VIEW_ITEM### -->
+<ul>###ATTACHED_FILES_ITEMS###</ul>
+<!-- ###ATTACHED_FILES_LIST_VIEW_ITEM### -->
+
+<!-- ###ATTACHED_FILES_SINGLE_ITEM### -->
+<li>###ATTACHED_FILES_SINGLE_TITLE###</li>
+<!-- ###ATTACHED_FILES_SINGLE_ITEM### -->
+
+<!-- ###SELECTOR_WIDGET### -->
+<div class="tx-seminars-pi1-selectorwidget">
+	<p>###LABEL_SEARCHING_HINTS###</p>
+	<form action="" method="post">
+		<p>
+		<!-- ###SEARCH_PART_EVENT_TYPE### -->
+			<span class="tx-seminars-pi1-optionbox" id="tx-seminars-pi1-optionbox-1">
+				###OPTIONS_EVENT_TYPE###
+			</span>
+		<!-- ###SEARCH_PART_EVENT_TYPE### -->
+		<!-- ###SEARCH_PART_LANGUAGE### -->
+			<span class="tx-seminars-pi1-optionbox" id="tx-seminars-pi1-optionbox-2">
+				###OPTIONS_LANGUAGE###
+			</span>
+		<!-- ###SEARCH_PART_LANGUAGE### -->
+		<!-- ###SEARCH_PART_COUNTRY### -->
+			<span class="tx-seminars-pi1-optionbox" id="tx-seminars-pi1-optionbox-3">
+				###OPTIONS_COUNTRY###
+			</span>
+		<!-- ###SEARCH_PART_COUNTRY### -->
+		<!-- ###SEARCH_PART_CITY### -->
+			<span class="tx-seminars-pi1-optionbox" id="tx-seminars-pi1-optionbox-4">
+				###OPTIONS_CITY###
+			</span>
+		<!-- ###SEARCH_PART_CITY### -->
+		<!-- ###SEARCH_PART_PLACE### -->
+			<span class="tx-seminars-pi1-optionbox" id="tx-seminars-pi1-optionbox-5">
+				###OPTIONS_PLACE###
+			</span>
+		<!-- ###SEARCH_PART_PLACE### -->
+		<!-- ###SEARCH_PART_ORGANIZER### -->
+			<span class="tx-seminars-pi1-optionbox" id="tx-seminars-pi1-optionbox-6">
+				###OPTIONS_ORGANIZER###
+			</span>
+		<!-- ###SEARCH_PART_ORGANIZER### -->
+		<!-- ###SEARCH_PART_CATEGORIES### -->
+			<span class="tx-seminars-pi1-optionbox" id="tx-seminars-pi1-optionbox-7">
+				###OPTIONS_CATEGORIES###
+			</span>
+		<!-- ###SEARCH_PART_CATEGORIES### -->
+		</p>
+		<!-- ###SEARCH_PART_DATE### -->
+		<p>
+			###LABEL_DATE_SEARCH### ###OPTIONS_DATE_FROM### ###LABEL_TO### ###OPTIONS_DATE_TO###
+		</p>
+		<!-- ###SEARCH_PART_DATE### -->
+		<!-- ###SEARCH_PART_AGE### -->
+		<p>
+			<label for="tx_seminars_pi1_search_age">###LABEL_AGE_SEARCH###</label>
+			<input type="text" id="tx_seminars_pi1_search_age" name="tx_seminars_pi1[age]" value="###AGE_VALUE###" />
+		</p>
+		<!-- ###SEARCH_PART_AGE### -->
+		<!-- ###SEARCH_PART_PRICE### -->
+		<p>
+			<label for="tx_seminars_pi1_price_from">###LABEL_PRICE_SEARCH###</label>
+			<input type="text" id="tx_seminars_pi1_price_from" name="tx_seminars_pi1[price_from]" value="###PRICE_FROM_VALUE###" />
+			<label for="tx_seminars_pi1_price_to">###LABEL_TO###</label>
+			<input type="text" id="tx_seminars_pi1_price_to" name="tx_seminars_pi1[price_to]" value="###PRICE_TO_VALUE###" />
+		</p>
+		<!-- ###SEARCH_PART_PRICE### -->
+		<!-- ###SEARCH_PART_TEXT### -->
+		<p>
+			<label for="tx_seminars_pi1_sword">###LABEL_SELECTOR_SEARCHBOX###:</label>
+			<input type="text" id="tx_seminars_pi1_sword" name="tx_seminars_pi1[sword]" value="###SEARCHBOX_VALUE###" />
+		</p>
+		<!-- ###SEARCH_PART_TEXT### -->
+		<p>
+			<input type="submit" value="###LABEL_SELECTOR_SUBMIT###" />
+			<input type="submit" value="###LABEL_SELECTOR_RESET###"
+				onclick="clearSearchWidgetFields();return true;" />
+			<input type="hidden" name="tx_seminars_pi1[pointer]" value="0" />
+		</p>
+	</form>
+</div>
+<!-- ###SELECTOR_WIDGET### -->
+
+
+<!-- ###OPTIONS_BOX### -->
+		<label for="###OPTIONBOX_ID###">###OPTIONS_HEADER###</label><br />
+		<select name="###OPTIONBOX_NAME###" id="###OPTIONBOX_ID###" size="5" multiple="multiple">
+			###OPTIONS###
+		</select>
+<!-- ###OPTIONS_BOX### -->
+
+<!-- ###SINGLE_DROPDOWN### -->
+		<select name="###DROPDOWN_NAME###" id="###DROPDOWN_ID###" size="1">
+			###DROPDOWN_OPTIONS###
+		</select>
+<!-- ###SINGLE_DROPDOWN### -->
+
+<!-- ###OPTIONS_ENTRY### -->
+			<option value="###OPTION_VALUE###"###OPTION_SELECTED###>###OPTION_LABEL###</option>
+<!-- ###OPTIONS_ENTRY### -->
+
+
+<!-- ###COUNTDOWN### -->
+<p>###COUNT_DOWN_MESSAGE###</p>
+<!-- ###COUNTDOWN### -->
+
+
+<!-- ###SINGLE_VIEW###  -->
+
+<!-- ###FIELD_WRAPPER_TITLE### -->
+	<h1
+		<!-- ###FIELD_WRAPPER_IMAGE### -->
+			###STYLE_SINGLEVIEWTITLE###
+		<!-- ###FIELD_WRAPPER_IMAGE### -->
+	>
+	<!-- ###FIELD_WRAPPER_EVENT_TYPE### -->
+		###EVENT_TYPE###:
+	<!-- ###FIELD_WRAPPER_EVENT_TYPE### -->
+	###TITLE###</h1>
+
+<!-- ###FIELD_WRAPPER_TITLE### --><!-- ###FIELD_WRAPPER_SUBTITLE### --><h2>###SUBTITLE###</h2>
+
+<!-- ###FIELD_WRAPPER_SUBTITLE### --><!-- ###FIELD_WRAPPER_DESCRIPTION### -->###DESCRIPTION###
+
+<!-- ###FIELD_WRAPPER_DESCRIPTION### --><!-- ###FIELD_WRAPPER_ACCREDITATION_NUMBER### --><h2>###LABEL_ACCREDITATION_NUMBER###</h2>
+<p>###ACCREDITATION_NUMBER###</p>
+
+<!-- ###FIELD_WRAPPER_ACCREDITATION_NUMBER### --><!-- ###FIELD_WRAPPER_CREDIT_POINTS### --><h2>###LABEL_CREDIT_POINTS###</h2>
+<p>###CREDIT_POINTS###</p>
+
+<!-- ###FIELD_WRAPPER_CREDIT_POINTS### -->
+<!-- ###FIELD_WRAPPER_CATEGORY### -->
+<h2>###LABEL_CATEGORY###</h2>
+<ul>
+<!-- ###SINGLE_CATEGORY### -->
+	<li>###CATEGORY_TITLE### ###CATEGORY_ICON###</li>
+<!-- ###SINGLE_CATEGORY### -->
+</ul>
+<!-- ###FIELD_WRAPPER_CATEGORY### -->
+
+<!-- ###FIELD_WRAPPER_DATE### --><h2>###LABEL_DATE###</h2>
+<p>###DATE###</p>
+
+<!-- ###FIELD_WRAPPER_DATE### --><!-- ###FIELD_WRAPPER_UID### --><h2>###LABEL_UID###</h2>
+<p>###UID###</p>
+
+<!-- ###FIELD_WRAPPER_UID### --><!-- ###FIELD_WRAPPER_TIME### --><h2>###LABEL_TIME###</h2>
+<p>###TIME###</p>
+
+<!-- ###FIELD_WRAPPER_TIME### --><!-- ###FIELD_WRAPPER_PLACE### --><h2>###LABEL_PLACE###</h2>
+###PLACE###
+
+<!-- ###FIELD_WRAPPER_PLACE### --><!-- ###FIELD_WRAPPER_ROOM### --><h2>###LABEL_ROOM###</h2>
+<p>###ROOM###</p>
+
+<!-- ###FIELD_WRAPPER_ROOM### -->
+<!-- ###FIELD_WRAPPER_TIMESLOTS### -->
+<h2>###LABEL_TIMESLOTS###</h2>
+<table cellpadding="0" cellspacing="0" class="contenttable tx-seminars-pi1-timeslots" style="margin-top:12px;">
+	<thead>
+		<tr>
+			<th scope="col">###LABEL_TIMESLOT_DATE###</th>
+			<th scope="col">###LABEL_TIMESLOT_TIME###</th>
+			<th scope="col">###LABEL_TIMESLOT_ENTRY_DATE###</th>
+			<th scope="col">###LABEL_TIMESLOT_ROOM###</th>
+			<th scope="col">###LABEL_TIMESLOT_PLACE###</th>
+			<th scope="col">###LABEL_TIMESLOT_SPEAKERS###</th>
+		</tr>
+	</thead>
+	<tbody>
+		<!-- ###SINGLE_TIMESLOT### -->
+		<tr>
+			<td>###TIMESLOT_DATE###</td>
+			<td>###TIMESLOT_TIME###</td>
+			<td>###TIMESLOT_ENTRY_DATE###</td>
+			<td>###TIMESLOT_ROOM###</td>
+			<td>###TIMESLOT_PLACE###</td>
+			<td>###TIMESLOT_SPEAKERS###</td>
+		</tr>
+		<!-- ###SINGLE_TIMESLOT### -->
+	</tbody>
+</table>
+
+<!-- ###FIELD_WRAPPER_TIMESLOTS### -->
+<!-- ###FIELD_WRAPPER_EXPIRY### --><h2>###LABEL_EXPIRY###</h2>
+<p>###EXPIRY###</p>
+
+<!-- ###FIELD_WRAPPER_EXPIRY### -->
+<!-- ###FIELD_WRAPPER_SPEAKERS### --><h2>###LABEL_SPEAKERS###</h2>
+<dl>###SPEAKERS###</dl>
+
+<!-- ###FIELD_WRAPPER_SPEAKERS### --><!-- ###FIELD_WRAPPER_PARTNERS### --><h2>###LABEL_PARTNERS###</h2>
+<dl>###PARTNERS###</dl>
+
+<!-- ###FIELD_WRAPPER_PARTNERS### --><!-- ###FIELD_WRAPPER_TUTORS### --><h2>###LABEL_TUTORS###</h2>
+<dl>###TUTORS###</dl>
+
+<!-- ###FIELD_WRAPPER_TUTORS### --><!-- ###FIELD_WRAPPER_LEADERS### --><h2>###LABEL_LEADERS###</h2>
+<dl>###LEADERS###</dl>
+
+<!-- ###FIELD_WRAPPER_LEADERS### --><!-- ###FIELD_WRAPPER_LANGUAGE### --><h2>###LABEL_LANGUAGE###</h2>
+<p>###LANGUAGE###</p>
+
+<!-- ###FIELD_WRAPPER_LANGUAGE### --><!-- ###FIELD_WRAPPER_PRICE_EARLYBIRD_REGULAR### --><h2>###LABEL_PRICE_EARLYBIRD_REGULAR###</h2>
+<p>###PRICE_EARLYBIRD_REGULAR### (###MESSAGE_EARLYBIRD_PRICE_REGULAR###)</p>
+
+<!-- ###FIELD_WRAPPER_PRICE_EARLYBIRD_REGULAR### --><!-- ###FIELD_WRAPPER_PRICE_REGULAR### --><h2>###LABEL_PRICE_REGULAR###</h2>
+<p>###PRICE_REGULAR###</p>
+
+<!-- ###FIELD_WRAPPER_PRICE_REGULAR### --><!-- ###FIELD_WRAPPER_PRICE_EARLYBIRD_SPECIAL### --><h2>###LABEL_PRICE_EARLYBIRD_SPECIAL###</h2>
+<p>###PRICE_EARLYBIRD_SPECIAL### (###MESSAGE_EARLYBIRD_PRICE_SPECIAL###)</p>
+
+<!-- ###FIELD_WRAPPER_PRICE_EARLYBIRD_SPECIAL### --><!-- ###FIELD_WRAPPER_PRICE_BOARD_REGULAR### --><h2>###LABEL_PRICE_BOARD_REGULAR###</h2>
+<p>###PRICE_BOARD_REGULAR###</p>
+
+<!-- ###FIELD_WRAPPER_PRICE_BOARD_REGULAR### --><!-- ###FIELD_WRAPPER_PRICE_SPECIAL### --><h2>###LABEL_PRICE_SPECIAL###</h2>
+<p>###PRICE_SPECIAL###</p>
+
+<!-- ###FIELD_WRAPPER_PRICE_SPECIAL### --><!-- ###FIELD_WRAPPER_PRICE_BOARD_SPECIAL### --><h2>###LABEL_PRICE_BOARD_SPECIAL###</h2>
+<p>###PRICE_BOARD_SPECIAL###</p>
+
+<!-- ###FIELD_WRAPPER_PRICE_BOARD_SPECIAL### --><!-- ###FIELD_WRAPPER_ADDITIONAL_INFORMATION### -->###ADDITIONAL_INFORMATION###
+
+<!-- ###FIELD_WRAPPER_ADDITIONAL_INFORMATION### -->
+<!-- ###FIELD_WRAPPER_PAYMENTMETHODS### -->
+<h2>###LABEL_PAYMENTMETHODS###</h2>
+<ul>
+	<!-- ###SINGLE_PAYMENT_METHOD### -->
+	<li>###PAYMENT_METHOD###</li>
+	<!-- ###SINGLE_PAYMENT_METHOD### -->
+</ul>
+<!-- ###FIELD_WRAPPER_PAYMENTMETHODS### -->
+<!-- ###FIELD_WRAPPER_TARGET_GROUPS### -->
+<h2>###LABEL_TARGET_GROUPS###</h2>
+<ul>
+	<!-- ###SINGLE_TARGET_GROUP### -->
+	<li>###TARGET_GROUP###</li>
+	<!-- ###SINGLE_TARGET_GROUP### -->
+</ul>
+
+<!-- ###FIELD_WRAPPER_TARGET_GROUPS### -->
+<!-- ###FIELD_WRAPPER_REQUIREMENTS### -->
+<h2>###LABEL_REQUIREMENTS###</h2>
+<ul>
+	<!-- ###SINGLE_REQUIREMENT### -->
+	<li><a href="###REQUIREMENT_URL###">###REQUIREMENT_TITLE###</a></li>
+	<!-- ###SINGLE_REQUIREMENT### -->
+</ul>
+<!-- ###FIELD_WRAPPER_REQUIREMENTS### -->
+<!-- ###FIELD_WRAPPER_DEPENDENCIES### -->
+<h2>###LABEL_DEPENDENCIES###</h2>
+<ul>
+	<!-- ###SINGLE_DEPENDENCY### -->
+	<li>###DEPENDENCY_TITLE###</li>
+	<!-- ###SINGLE_DEPENDENCY### -->
+</ul>
+<!-- ###FIELD_WRAPPER_DEPENDENCIES### -->
+<!-- ###FIELD_WRAPPER_ORGANIZERS### -->
+<h2>###LABEL_ORGANIZERS###</h2>
+<dl>###ORGANIZERS###</dl>
+
+<!-- ###FIELD_WRAPPER_ORGANIZERS### -->
+
+<!-- ###FIELD_WRAPPER_ORGANIZING_PARTNERS### -->
+<h2>###LABEL_ORGANIZING_PARTNERS###</h2>
+<p>###ORGANIZING_PARTNERS###</p>
+<!-- ###FIELD_WRAPPER_ORGANIZING_PARTNERS### -->
+
+<!-- ###FIELD_WRAPPER_OWNER_DATA### -->
+<h2>###LABEL_OWNER###</h2>
+<p>
+<!-- ###OWNER_DATA### -->
+<!-- ###OWNER_DATA_SEPARATOR### --><br /><!-- ###OWNER_DATA_SEPARATOR### -->
+<!-- ###OWNER_DATA### -->
+</p>
+<div class="tx-seminars-pi1-clear"></div>
+<!-- ###FIELD_WRAPPER_OWNER_DATA### -->
+
+<!-- ###FIELD_WRAPPER_ATTACHED_FILES### -->
+<h2>###LABEL_ATTACHED_FILES###</h2>
+<ul>
+	<!-- ###ATTACHED_FILES_LIST_ITEM### -->
+	<li class="filetype-###ATTACHED_FILE_TYPE###">###ATTACHED_FILE_NAME### (###ATTACHED_FILE_SIZE###)</li>
+	<!-- ###ATTACHED_FILES_LIST_ITEM### -->
+</ul>
+<!-- ###FIELD_WRAPPER_ATTACHED_FILES### -->
+<!-- ###FIELD_WRAPPER_DEADLINE_REGISTRATION### --><h2>###LABEL_DEADLINE_REGISTRATION###</h2>
+<p>###DEADLINE_REGISTRATION###</p>
+
+<!-- ###FIELD_WRAPPER_DEADLINE_REGISTRATION### -->
+<!-- ###FIELD_WRAPPER_VACANCIES### -->
+<h2>###LABEL_VACANCIES###</h2>
+<p>###VACANCIES###</p>
+
+<!-- ###FIELD_WRAPPER_VACANCIES### -->
+<!-- ###FIELD_WRAPPER_REGISTRATION### --><h2>###LABEL_REGISTRATION###</h2>
+<p>###REGISTRATION###</p>
+
+<!-- ###FIELD_WRAPPER_REGISTRATION### --><!-- ###FIELD_WRAPPER_LIST_REGISTRATIONS### --><h2>###LABEL_LIST_REGISTRATIONS###</h2>
+<p>###LIST_REGISTRATIONS###</p>
+
+<!-- ###FIELD_WRAPPER_LIST_REGISTRATIONS### -->
+<!-- ###SINGLE_VIEW###  -->
+
+<!-- ###OTHERDATES_VIEW### -->
+<!-- ###FIELD_WRAPPER_OTHERDATES### --><h2>###LABEL_LIST_OTHERDATES###</h2>
+###TABLE_OTHERDATES###
+<!-- ###FIELD_WRAPPER_OTHERDATES### -->
+<!-- ###OTHERDATES_VIEW### -->
+
+<!-- ###EVENTSNEXTDAY_VIEW### -->
+<!-- ###FIELD_WRAPPER_EVENTSNEXTDAY### --><h2>###LABEL_EVENTSNEXTDAY###</h2>
+###TABLE_EVENTSNEXTDAY###
+<!-- ###FIELD_WRAPPER_EVENTSNEXTDAY### -->
+<!-- ###EVENTSNEXTDAY_VIEW### -->
+
+<!-- ###BACK_VIEW### -->
+<!-- ###FIELD_WRAPPER_BACK### --><hr />
+<p style="padding-top:24px;">###BACKLINK###</p>
+<!-- ###FIELD_WRAPPER_BACK### -->
+<!-- ###BACK_VIEW### -->
+
+
+<!-- ###PLACE_LIST_ITEM### -->
+<dt class="place-detail-item">###PLACE_ITEM_TITLE###</dt>
+<dd class="place-detail-item">###PLACE_ITEM_DESCRIPTION###</dd>
+<!-- ###PLACE_LIST_ITEM### -->
+
+
+<!-- ###PLACE_LIST_COMPLETE### -->
+<dl>###PLACE_LIST_CONTENT###</dl>
+<!-- ###PLACE_LIST_COMPLETE### -->
+
+
+<!-- ###PLACE_LIST_EMPTY### -->
+<p>###MESSAGE_WILL_BE_ANNOUNCED###</p>
+<!-- ###PLACE_LIST_EMPTY### -->
+
+
+<!-- ###SPEAKER_LIST_ITEM### -->
+<dt>###SPEAKER_ITEM_TITLE###</dt>
+<dd>###SPEAKER_ITEM_DESCRIPTION###</dd>
+<!-- ###SPEAKER_LIST_ITEM### -->
+
+<!-- ###ORGANIZER_LIST_ITEM### -->
+<dt>###ORGANIZER_ITEM_TITLE###</dt>
+###ORGANIZER_ITEM_DESCRIPTION###
+<!-- ###ORGANIZER_LIST_ITEM### -->
+
+<!-- ###ORGANIZER_DESCRIPTION_ITEM### -->
+<dd>###ORGANIZER_DESCRIPTION_CONTENT###</dd>
+<!-- ###ORGANIZER_DESCRIPTION_ITEM### -->
+
+<!-- ###ERROR_VIEW### -->
+<p class="tx-seminars-pi1-error">###ERROR_TEXT###</p>
+
+<!-- ###ERROR_VIEW### -->
+
+
+<!-- ###REGISTRATION_HEAD### -->
+<h2>###LABEL_REGISTRATION###: <!-- ###REGISTRATION_WRAPPER_UID### -->###LABEL_UID### ###UID###, <!-- ###REGISTRATION_WRAPPER_UID### --> <!-- ###REGISTRATION_WRAPPER_TITLE### -->###TITLE###<!-- ###REGISTRATION_WRAPPER_TITLE### --><!-- ###REGISTRATION_WRAPPER_DATE### -->, ###DATE###<!-- ###REGISTRATION_WRAPPER_DATE### --></h2>
+<!-- ###WRAPPER_ERROR### --><p class="tx-seminars-pi1-error">###ERROR_TEXT###</p>
+
+<!-- ###WRAPPER_ERROR### -->
+<!-- ###REGISTRATION_HEAD### -->
+
+
+<!-- ###REGISTRATION_BOTTOM### -->
+<div class="tx-seminars-pi1-clear"></div>
+<!-- ###REGISTRATION_BOTTOM### -->
+
+
+<!-- ###REGISTRATION_THANKYOU### -->
+<p>###LABEL_THANKYOU###</p>
+<!-- ###REGISTRATION_THANKYOU### -->
+
+
+
+<h2>The front-end list of registrations</h2>
+
+<!-- ###REGISTRATIONS_LIST_VIEW### -->
+<h1>###LABEL_LIST_REGISTRATIONS###: ###TITLE###</h1>
+
+<!-- ###WRAPPER_ERROR### -->
+<p class="tx-seminars-pi1-error">###ERROR_TEXT###</p>
+<!-- ###WRAPPER_ERROR### -->
+
+###REGISTRATIONS_LIST_VIEW_CONTENT###
+
+<!-- ###FIELD_WRAPPER_BACK### --><hr />
+<p>###BACKLINK###</p>
+<!-- ###FIELD_WRAPPER_BACK### -->
+<!-- ###REGISTRATIONS_LIST_VIEW### -->
+
+
+<h2>Subparts used by the front-end list of registrations</h2>
+
+<!-- ###WRAPPER_REGISTRATIONS_LIST_MESSAGE### -->
+<p>###MESSAGE_NO_REGISTRATIONS###</p>
+<!-- ###WRAPPER_REGISTRATIONS_LIST_MESSAGE### -->
+
+<!-- ###WRAPPER_REGISTRATIONS_LIST_WAITING_LIST### -->
+<h2>###LABEL_WAITING_LIST###</h2>
+
+<!-- ###WRAPPER_REGISTRATIONS_LIST_TABLE### -->
+<table summary="###LABEL_REGISTRATIONS###">
+	<thead>
+		<!-- ###WRAPPER_REGISTRATIONS_LIST_TABLE_HEAD### -->
+		<tr>
+			<!-- ###WRAPPER_REGISTRATIONS_LIST_TABLE_HEAD_CELL### -->
+			<th scope="col">###REGISTRATIONS_LIST_HEADER###</th>
+			<!-- ###WRAPPER_REGISTRATIONS_LIST_TABLE_HEAD_CELL### -->
+		</tr>
+		<!-- ###WRAPPER_REGISTRATIONS_LIST_TABLE_HEAD### -->
+	</thead>
+	<tbody>
+###REGISTRATIONS_LIST_ROWS###
+	</tbody>
+</table>
+<!-- ###WRAPPER_REGISTRATIONS_LIST_TABLE### -->
+<!-- ###WRAPPER_REGISTRATIONS_LIST_WAITING_LIST### -->
+
+<!-- ###WRAPPER_REGISTRATIONS_LIST_ROW### -->
+<tr>
+###REGISTRATIONS_LIST_CELLS###
+</tr>
+<!-- ###WRAPPER_REGISTRATIONS_LIST_ROW### -->
+<!-- ###WRAPPER_REGISTRATIONS_LIST_CELL### -->
+<td>###REGISTRATIONS_LIST_CELL###</td>
+<!-- ###WRAPPER_REGISTRATIONS_LIST_CELL### -->
+
+
+<!-- ###REGISTRATION_CONFIRMATION_FEUSER### -->
+<div id="tx-seminars-feuser-fields">
+	<h2>###LABEL_YOUR_USER_DATA###</h2>
+	<p>
+	###USER_NAME###<br />
+	###USER_TX_FEUSERSERW_TRAEGER###<br />	
+	###USER_TX_FEUSERSERW_PROJEKT###<br />
+	###USER_COMPANY###<br />
+	###USER_ADDRESS###<br />
+	###USER_ZIP### ###USER_CITY###<br />
+	###USER_COUNTRY###<br />
+	###USER_TELEPHONE###<br />
+	###USER_EMAIL###<br />
+	</p>
+</div>
+<!-- ###REGISTRATION_CONFIRMATION_FEUSER### -->
+
+<!-- ###REGISTRATION_CONFIRMATION_BILLING### -->
+<h2>###LABEL_BILLING_ADDRESS###</h2>
+<p>
+###REGISTRATION_BILLING_ADDRESS###
+</p>
+<!-- ###REGISTRATION_CONFIRMATION_BILLING### -->
+
+<!-- ###REGISTRATION_CONFIRMATION_DATA### -->
+<h2>###REGISTRATION_DATA_HEADING###</h2>
+<p>
+###REGISTRATION_DATA_BODY###
+</p>
+<!-- ###REGISTRATION_CONFIRMATION_DATA### -->
+
+<!-- ###VIEW_CATEGORIES### -->
+<div class="tx-seminars-pi1-categorylist">
+	<p>###LABEL_WE_OFFER_EVENTS_IN_CATEGORIES###</p>
+	<ul>###ALL_CATEGORY_ITEMS###</ul>
+</div>
+<!-- ###VIEW_CATEGORIES### -->
+
+<!-- ###SINGLE_CATEGORY_ITEM### -->
+	<li>###CATEGORY_TITLE###</li>
+<!-- ###SINGLE_CATEGORY_ITEM### -->
+
+<!-- ###VIEW_NO_CATEGORIES### -->
+<div class="tx-seminars-pi1-categorylist">
+	<p>###LABEL_NO_CATEGORIES###</p>
+</div>
+<!-- ###VIEW_NO_CATEGORIES### -->
+
+<!-- ###VIEW_HEADLINE### -->
+	<h2>###TITLE_AND_DATE###</h2>
+<!-- ###VIEW_HEADLINE### -->
+
+<!-- ###MAIL_PUBLISH_EVENT### -->
+###LABEL_PUBLISH_EVENT_TEXT###
+
+###LABEL_PUBLISH_EVENT_OVERVIEW###
+###PUBLISH_EVENT_TITLE###<!-- ###WRAPPER_PUBLISH_EVENT_DATE### -->, ###PUBLISH_EVENT_DATE###<!-- ###WRAPPER_PUBLISH_EVENT_DATE### -->
+###PUBLISH_EVENT_DESCRIPTION###
+
+###LABEL_PUBLISH_EVENT_LINK###
+<###PUBLISH_EVENT_LINK###>
+
+###LABEL_PUBLISH_EVENT_NOTICE###
+<!-- ###MAIL_PUBLISH_EVENT### -->
+
+<!-- ###MAIL_SAVE_EVENT### -->
+###LABEL_SAVE_EVENT_TEXT###
+
+###LABEL_SAVE_EVENT_OVERVIEW###
+
+###SAVE_EVENT_TITLE###<!-- ###WRAPPER_SAVE_EVENT_DATE### -->, ###SAVE_EVENT_DATE###<!-- ###WRAPPER_SAVE_EVENT_DATE### -->
+
+###SAVE_EVENT_DESCRIPTION###
+<!-- ###MAIL_SAVE_EVENT### -->

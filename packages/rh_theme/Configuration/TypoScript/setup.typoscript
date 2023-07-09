@@ -1,0 +1,68 @@
+##############################
+#### FLUID STYLED CONTENT ####
+##############################
+@import 'EXT:fluid_styled_content/Configuration/TypoScript/setup.typoscript'
+
+
+################
+#### HELPER ####
+################
+@import 'EXT:rh_theme/Configuration/TypoScript/Helper/*.typoscript'
+
+
+####################
+#### EXTENSIONS ####
+####################
+
+@import 'EXT:rh_theme/Configuration/TypoScript/Extensions/*/*.typoscript'
+
+
+####################
+#### SOLR QUEUE ####
+####################
+// @import 'EXT:rh_theme/Configuration/TypoScript/Extensions/solr/iq_*.typoscript'
+
+
+##############
+#### PAGE ####
+##############
+page = PAGE
+@import 'EXT:rh_theme/Configuration/TypoScript/Page/Basics.typoscript'
+@import 'EXT:rh_theme/Configuration/TypoScript/Page/FileInclude.typoscript'
+@import 'EXT:rh_theme/Configuration/TypoScript/Page/Template.typoscript'
+@import 'EXT:rh_theme/Configuration/TypoScript/Page/Meta.typoscript'
+
+
+################
+#### CONFIG ####
+################
+@import 'EXT:rh_theme/Configuration/TypoScript/Page/Config.typoscript'
+
+
+####################
+#### RTE CONFIG ####
+####################
+@import 'EXT:rh_theme/Configuration/TypoScript/Rte/parseFunc_RTE.typoscript'
+
+
+// alte scheiße
+@import 'EXT:rh_theme/Configuration/TypoScript/TemplateStorage/*'
+
+
+[applicationContext == "Development"]
+config {
+    no_cache = 0
+    admPanel = 0
+    sendCacheHeaders = 0
+    cache_period = 0
+    compressJs = 0
+    compressCss = 0
+    concatenateJs = 0
+    concatenateCss = 0
+    contentObjectExceptionHandler = 0
+    frontend_editing = 0
+}
+[end]
+
+
+lib.parseFunc_RTE.nonTypoTagStdWrap.encapsLines.addAttributes.P.class = bodytext

@@ -1,0 +1,141 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <title>indexed_search template</title>
+</head>
+
+<body>
+
+<h1>Indexed Search: Default template</h1>
+
+
+<h2>TEMPLATE_SEARCH_FORM</h2>
+<p><em>Template for displaying the search form.</em></p>
+
+<!-- ###SEARCH_FORM### begin -->
+<div class="tx-indexedsearch-searchbox">
+<form action="###ACTION_URL###" method="post" id="tx_indexedsearch">
+  <input type="hidden" name="tx_indexedsearch[_sections]" value="0" />
+  <input type="hidden" name="tx_indexedsearch[_freeIndexUid]" id="tx_indexedsearch_freeIndexUid" value="_" />
+  <input type="hidden" name="tx_indexedsearch[pointer]" id="tx_indexedsearch_pointer" value="0" />
+  <!-- ###HIDDEN_FIELDS### begin -->
+  <input type="hidden" name="###HIDDEN_FIELDNAME###" value="###HIDDEN_VALUE###" />
+  <!-- ###HIDDEN_FIELDS### end -->
+<fieldset>
+  <label for="tx_indexedsearch[sword]" class="tx-indexedsearch-searchbox-sword">###FORM_SEARCHFOR###</label>
+  <input type="text" name="tx_indexedsearch[sword]" value="###SWORD_VALUE###" class="tx-indexedsearch-searchbox-sword sword" />
+
+    <!-- ###ADDITONAL_KEYWORD### begin -->
+<input type="hidden" name="tx_indexedsearch[sword_prev]" value="###SWORD_PREV_VALUE###" /><input type="checkbox" name="tx_indexedsearch[sword_prev_include]" id="tx_indexedsearch_sword_prev_include" value="1" ###SWORD_PREV_INCLUDE_CHECKED### /> <label for="tx_indexedsearch_sword_prev_include">###ADD_TO_CURRENT_SEARCH###</label>.
+
+    <!-- ###ADDITONAL_KEYWORD### end -->
+<input type="submit" name="tx_indexedsearch[submit_button]" value="###FORM_SUBMIT###" class="tx-indexedsearch-searchbox-button submit" />
+
+    <!-- ###SEARCH_FORM_EXTENDED### begin -->
+
+    <!-- ###SELECT_SEARCH_FOR### begin -->
+    <label for="tx_indexedsearch[type]">###FORM_MATCH###</label>
+        <!-- ###SELECT_SEARCH_TYPE### begin -->
+        <select name="tx_indexedsearch[type]" class="tx-indexedsearch-selectbox-type type">
+          ###SELECTBOX_TYPE_VALUES###
+        </select>
+        <!-- ###SELECT_SEARCH_TYPE### end -->
+
+        <!-- ###SELECT_SEARCH_DEFOP### begin -->
+        <label for="tx_indexedsearch[defOp]"></label>
+        <select name="tx_indexedsearch[defOp]" class="tx-indexedsearch-selectbox-defop defop">
+          ###SELECTBOX_DEFOP_VALUES###
+        </select>
+        <!-- ###SELECT_SEARCH_DEFOP### end -->
+
+    <!-- ###SELECT_SEARCH_FOR### end -->
+
+
+    <!-- ###SELECT_RESULTS### begin -->
+    
+    <label for="tx_indexedsearch[results]">###FORM_ATATIME###</label>
+      
+        <select name="tx_indexedsearch[results]" class="tx-indexedsearch-selectbox-results results">
+          ###SELECTBOX_RESULTS_VALUES###
+        </select>
+      
+    
+    <!-- ###SELECT_RESULTS### end -->
+
+
+
+    <!-- ###SEARCH_FORM_EXTENDED### end -->
+
+      
+  <p class="linkP">###LINKTOOTHERMODE###</p>
+</form>
+</fieldset>
+</div>
+<!-- ###SEARCH_FORM### end -->
+<br /><br />
+
+
+
+
+
+
+<h2>TEMPLATE_RESULT_SECTION_LINKS</h2>
+<p><em>Template for the section links in section mode.</em></p>
+
+<!-- ###RESULT_SECTION_LINKS### begin -->
+  <div class="tx-indexedsearch-sec">
+    <table cellpadding="0" cellspacing="0" border="0" summary="Result links">
+      ###LINKS###
+    </table>
+  </div>
+<!-- ###RESULT_SECTION_LINKS### end -->
+
+<!-- ###RESULT_SECTION_LINKS_LINK### begin -->
+      
+        <td width="100%">--&gt; ###LINK###
+      
+<!-- ###RESULT_SECTION_LINKS_LINK### end -->
+<br /><br />
+
+
+
+
+<h2>TEMPLATE_SECTION_HEADER</h2>
+<p><em>Template for the section title in section mode.</em></p>
+<!-- ###SECTION_HEADER### begin -->
+  <div class="tx-indexedsearch-secHead"><a name="###ANCHOR_URL###"></a>
+    <table cellpadding="0" cellspacing="0" border="0" summary="Section header">
+      
+        <td class="tx-indexedsearch-title title" width="100%">###SECTION_TITLE###
+        <td class="tx-indexedsearch-result-count result-count" nowrap="nowrap">###RESULT_COUNT### ###RESULT_NAME###
+      
+    </table>
+  </div>
+
+<!-- ###SECTION_HEADER### end -->
+<br /><br />
+
+
+
+
+<h2>TEMPLATE_RESULT_OUTPUT</h2>
+<p><em>Template for the search result list.</em></p>
+
+<!-- ###RESULT_OUTPUT### begin -->
+  <dl class="tx-indexedsearch-res">
+      <!-- ###HEADER_ROW### begin -->
+      <dt><strong >###ICON### ###TITLE###</strong> </dt>
+      
+      <!-- ###HEADER_ROW### end -->
+
+      <!-- ###ROW_LONG### begin -->
+      <dd>###DESCRIPTION###</dd>
+      <!-- ###ROW_LONG### end -->
+  </dl>
+<!-- ###RESULT_OUTPUT### end -->
+
+
+
+</body>
+</html>

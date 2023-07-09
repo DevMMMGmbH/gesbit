@@ -1,0 +1,52 @@
+{namespace n=GeorgRinger\News\ViewHelpers}
+<f:layout name="General" />
+<!--
+	=====================
+		Templates/News/List.html
+-->
+
+<f:section name="content">
+
+	<f:if condition="{news}">
+		<f:then>
+			<div class="news-list-view">
+<f:if condition="{settings.templateLayout} == 90">
+<div class="showAll"><f:link.page pageUid="5" class="internal-link">Alle anzeigen</f:link.page></div>
+</f:if>
+<f:if condition="{settings.templateLayout} == 95">
+<div class="showAll"><f:link.page pageUid="6" class="internal-link">Alle anzeigen</f:link.page></div>
+</f:if>
+<f:if condition="{settings.templateLayout} == 99">
+<div class="showAll" style="float:right;margin-top:10px;"><f:link.page pageUid="85" class="internal-link">Alle anzeigen</f:link.page></div>
+</f:if>
+
+				<f:if condition="{settings.hidePagination}">
+					<f:then>
+						<f:for each="{news}" as="newsItem" iteration="iterator">
+							<f:render partial="List/Item" arguments="{newsItem: newsItem,settings:settings,iterator:iterator}" />
+						</f:for>
+					</f:then>
+					<f:else>
+						<f:if condition="{settings.list.paginate.insertAbove}">
+                            <f:render partial="List/Pagination" arguments="{pagination: pagination.pagination, paginator: pagination.paginator}" />
+                        </f:if>
+                        <f:for each="{pagination.paginator.paginatedItems}" as="newsItem" iteration="iterator">
+								<f:render partial="List/Item" arguments="{newsItem: newsItem,settings:settings,iterator:iterator}" />
+							</f:for>
+							<f:if condition="{settings.list.paginate.insertBelow}">
+                            <f:render partial="List/Pagination" arguments="{pagination: pagination.pagination, paginator: pagination.paginator}" />
+                        </f:if>
+					</f:else>
+				</f:if>
+
+			</div>
+		</f:then>
+		<f:else>
+			<div class="no-news-found">
+				<f:translate key="list_nonewsfound" />
+			</div>
+		</f:else>
+	</f:if>
+
+
+</f:section>

@@ -1,0 +1,150 @@
+@import 'base';
+
+.tx-br-reports {
+  width:100%;
+form {
+  width:100%;
+}
+  table {
+    clear:both;
+    float:none;
+  }
+}
+
+table.tx_brreports {
+  width:100%;
+margin-top: 20px;
+  border-collapse: collapse;
+  th {
+    background-color:$blau;
+    //color: #ffffff;
+    background-color: $hellgrau;
+    font-size:14px;
+    padding:5px;
+    text-align:left;
+   // border-right:1px solid #ffffff;
+  }
+
+  td {
+    font-size:14px;
+    padding:5px;
+    //background-color: $hellgrau;
+    //border-right:1px solid #ffffff;
+  }
+  tr {
+    border-bottom: 1px solid $blau;
+    border-bottom: 1px solid #dddddd;
+  }
+
+
+
+}
+
+a.report-view {
+  background-color: #42768c;
+  color: #ffffff !important;
+  padding: 5px;
+  box-sizing: border-box;
+  float: left;
+  font-size: 14px;
+  line-height:14px;
+  width:100%;
+  text-align:center;
+  border: 1px solid #fff;
+  &:hover {
+    text-decoration: none !important;
+  }
+}
+
+.tx-br-reports {
+  dl {
+    dt {
+      display:block;
+      
+    }
+  }
+  form,
+  .report-form {
+    input[type="submit"]{
+      background-color: #42768c;
+      color: #fff !important;
+      padding: 5px;
+      border:1px solid #fff;
+      box-sizing: border-box;
+      float: left;
+      font-size:14px;
+      line-height:14px;
+      //margin-top:5px;
+      width:100%;
+      text-align:center;
+    }
+  }
+}
+
+table.report-metadata {
+
+}
+
+table.form-page {
+  width:100%;
+  border-collapse: collapse;
+  margin-top: 2em;
+
+  caption {
+    text-align:left;
+    width:100%;
+    background-color: $hellgrau;
+    padding:10px;
+    font-size:1.2em;
+
+  }
+  tbody {
+    width:100%;
+    padding-top: 20px;
+  }
+  tr {
+
+    //border-bottom: 1px solid $blau;
+   // border-bottom: 1px solid #dddddd;
+    &.no-border {
+      border-bottom: none;
+    }
+  }
+td {
+  padding:5px;
+}
+  td.label {
+    //
+    &.field-textarea {
+      padding-top:20px;
+      font-weight: bold;
+    }
+
+  }
+}
+
+table.Supervisor {
+  &#form-page-1,
+  &#form-page-7 {
+    display:none
+  }
+  &#form-page-2 {
+    td.label {
+      width:200px;
+
+    }
+  }
+}
+table.Coach {
+  &#form-page-1,
+  &#form-page-10 {
+    display:none
+  }
+  &#form-page-2 {
+    td.label {
+      width:200px;
+
+    }
+  }
+}
+
