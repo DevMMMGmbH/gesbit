@@ -1,0 +1,72 @@
+base: /
+websiteTitle: ''
+baseVariants:
+  -
+    base: 'https://gesbit-typo3-11.ddev.site'
+    condition: 'applicationContext == "Development"'
+errorHandling:
+  -
+    errorCode: 404
+    errorHandler: Page
+    errorContentSource: 't3://page?uid=79'
+languages:
+  -
+    title: Deutsch
+    enabled: true
+    base: /
+    typo3Language: de
+    locale: de_DE
+    iso-639-1: de
+    websiteTitle: 'GesBiT - Gesellschaft für Bildung und Teilhabe mbH'
+    navigationTitle: Deutsch
+    hreflang: de-DE
+    direction: ltr
+    flag: de
+    languageId: 0
+rootPageId: 1
+routeEnhancers:
+  PageTypeSuffix:
+    type: PageType
+    default: /
+    index: ''
+    map:
+      /: 0
+      rss.xml: 9818
+      sitemap.xml: 1533906435
+  News:
+    type: Extbase
+    extension: News
+    plugin: Pi1
+    routes:
+      - routePath: '/'
+        _controller: 'News::list'
+      - routePath: '/page-{page}'
+        _controller: 'News::list'
+        _arguments:
+          page: 'currentPage'
+      - routePath: '/{news-title}'
+        _controller: 'News::detail'
+        _arguments:
+          news-title: news
+      - routePath: '/{category-name}'
+        _controller: 'News::list'
+        _arguments:
+          category-name: overwriteDemand/categories
+      - routePath: '/{tag-name}'
+        _controller: 'News::list'
+        _arguments:
+          tag-name: overwriteDemand/tags
+    defaultController: 'News::list'
+    defaults:
+      page: '0'
+    aspects:
+      news-title:
+        type: NewsTitle
+      page:
+        type: StaticRangeMapper
+        start: '1'
+        end: '100'
+      category-name:
+        type: NewsCategory
+      tag-name:
+        type: NewsTag
