@@ -1,0 +1,15 @@
+<p><strong class="element_title"><i>{title}</i></strong></p>
+<table class="element_table">
+	<tbody>
+		<tr>
+			<th class="listing">Nr.</th>
+			<th class="content">Title</th>
+		</tr>
+		<f:for each="{akkordeon}" as="item" iteration="iterator">
+			<tr>
+				<td class="fitwidth">{iterator.cycle}</td>
+				<td>{item.title}</td>
+			</tr>
+		</f:for>
+	</tbody>
+</table>

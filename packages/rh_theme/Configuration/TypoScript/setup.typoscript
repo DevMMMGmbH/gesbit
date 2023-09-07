@@ -66,3 +66,6 @@ config {
 
 
 lib.parseFunc_RTE.nonTypoTagStdWrap.encapsLines.addAttributes.P.class = bodytext
+
+
+@import 'EXT:rh_theme/Configuration/TypoScript/ContentElements/*.typoscript'

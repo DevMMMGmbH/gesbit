@@ -1,0 +1,17 @@
+tt_content.akkordeon < lib.contentElement
+tt_content.akkordeon {
+    templateName = Akkordeon
+    templateRootPaths.10 = EXT:rh_theme/Resources/Private/Templates/ContentElements/
+    partialRootPaths.10 = EXT:rh_theme/Resources/Private/Partials/ContentElements/
+    dataProcessing {
+        20 = TYPO3\CMS\Frontend\DataProcessing\DatabaseQueryProcessor
+        20 {
+            table = tx_rhtheme_akkordeon
+            pidInList = this
+            where = parentuid=
+            where.dataWrap = |{field:uid}
+            orderBy = sorting
+            as = akkordeon
+        }
+    }
+}

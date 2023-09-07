@@ -1,0 +1,15 @@
+mod.wizards.newContentElement.wizardItems.gesbit {
+   header = GesBit
+   after = common
+   elements {
+       akkordeon {
+           iconIdentifier = svg-icon-content-element
+           title = Akkordeon
+           description = Das Modul bietet die Möglichkeit, viele Inhalte kompakt und übersichtlich darzustellen.
+           tt_content_defValues {
+               CType = akkordeon
+           }
+        }
+    }
+    show := addToList(akkordeon)
+}

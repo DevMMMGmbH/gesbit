@@ -1,0 +1,25 @@
+<f:if condition="{data.header} || {data.subheader}">
+    <f:render partial="Header/All" arguments="{data:data}" />
+</f:if>
+<f:if condition="{akkordeon}">
+    <div class="ce-akkordeon" id="c{data.uid}">
+        <div id="accordion-{data.uid}" class="accordion">
+            <f:for each="{akkordeon}" as="item" iteration="i">
+                <div class="accordion-item">
+                    <div class="accordion-header {f:if(condition: '{i.isFirst}', then: 'first')}" id="heading-{data.uid}-{i.cycle}">
+                        <button class="fs-5 accordion-button">
+                            {item.data.title}
+                        </button>
+                    </div>
+                    <div id="collapse-{data.uid}-{i.cycle}" class="accordion-content" style="display: none;">
+                        <div class="accordion-body">
+                            <f:format.raw>
+                                {item.data.text}
+                            </f:format.raw>
+                        </div>
+                    </div>
+                </div>
+            </f:for>
+        </div>
+    </div>
+</f:if>
