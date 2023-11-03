@@ -2,6 +2,8 @@ imports:
     - { resource: "EXT:rte_ckeditor/Configuration/RTE/Processing.yaml" }
     - { resource: "EXT:rte_ckeditor/Configuration/RTE/Editor/Base.yaml" }
     - { resource: "EXT:rte_ckeditor/Configuration/RTE/Editor/Plugins.yaml" }
+    # Import the image plugin configuration
+    - { resource: "EXT:rte_ckeditor_image/Configuration/RTE/Plugin.yaml" }
 
 editor:
     config:
@@ -62,8 +64,8 @@ editor:
             - justify
             # - colorbutton
 
-        removePlugins:
-            - image
+        removePlugins: null
+            # - image
 
         removeButtons:
             - Anchor
@@ -116,8 +118,7 @@ buttons:
                     phone-link btn btn-primary,
                     phone-link btn btn-secondary,
                     phone-link btn btn-outline-primary,
-                    phone-link btn btn-outline-secondary
-                '
+                    phone-link btn btn-outline-secondary'
         page:
             properties:
                 class:

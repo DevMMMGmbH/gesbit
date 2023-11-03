@@ -1,4 +1,5 @@
 <?php
+
 return [
     'ctrl' => [
         'sortby' => 'sorting',
@@ -93,7 +94,8 @@ return [
                 'renderType' => 'checkboxToggle',
                 'items' => [
                     [
-                        'label' => '',
+                        0 => '',
+                        1 => '',
                         'invertStateDisplay' => true
                     ]
                 ],
@@ -103,7 +105,9 @@ return [
             'exclude' => true,
             'label' => 'LLL:EXT:core/Resources/Private/Language/locallang_general.xlf:LGL.starttime',
             'config' => [
-                'type' => 'datetime',
+                'type' => 'input',
+                'renderType' => 'inputDateTime',
+                                    'eval' => 'datetime',
                 'default' => 0,
             ],
             'l10n_mode' => 'exclude',
@@ -113,7 +117,9 @@ return [
             'exclude' => true,
             'label' => 'LLL:EXT:core/Resources/Private/Language/locallang_general.xlf:LGL.endtime',
             'config' => [
-                'type' => 'datetime',
+                'type' => 'input',
+                'renderType' => 'inputDateTime',
+                                    'eval' => 'datetime',
                 'default' => 0,
                 'range' => [
                     'upper' => mktime(0, 0, 0, 1, 1, 2038),
@@ -132,16 +138,16 @@ return [
                 'maxitems' => 20,
                 'items' => [
                     [
-                        'label' => 'LLL:EXT:core/Resources/Private/Language/locallang_general.xlf:LGL.hide_at_login',
-                        'value' => -1,
+                        'LLL:EXT:core/Resources/Private/Language/locallang_general.xlf:LGL.hide_at_login',
+                        -1,
                     ],
                     [
-                        'label' => 'LLL:EXT:core/Resources/Private/Language/locallang_general.xlf:LGL.any_login',
-                        'value' => -2,
+                        'LLL:EXT:core/Resources/Private/Language/locallang_general.xlf:LGL.any_login',
+                        -2,
                     ],
                     [
-                        'label' => 'LLL:EXT:core/Resources/Private/Language/locallang_general.xlf:LGL.usergroups',
-                        'value' => '--div--',
+                        'LLL:EXT:core/Resources/Private/Language/locallang_general.xlf:LGL.usergroups',
+                        '--div--',
                     ],
                 ],
                 'exclusiveKeys' => '-1,-2',
@@ -180,11 +186,53 @@ return [
                 ],
             ],
         ],
+        'image' => [
+            'exclude' => 1,
+            'label' => 'LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:image_formlabel',
+            'config' => \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::getFileFieldTCAConfig(
+                'image',
+                [
+                    'maxitems' => 1,
+                    'appearance' => [
+                        'createNewRelationLinkTitle' => 'LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:images.addFileReference',
+                        'fileUploadAllowed' => 0,
+                    ],
+                    'overrideChildTca' => [
+                        'columns' => [
+                            'uid_local' => [
+                                'config' => [
+                                    'appearance' => [
+                                        'elementBrowserAllowed' => 'gif,jpg,jpeg,png,svg'
+                                    ],
+                                ],
+                            ],
+                        ],
+                        'types' => [
+                            \TYPO3\CMS\Core\Resource\File::FILETYPE_IMAGE => [
+                                'showitem' => '
+                                --palette--;;imageoverlayPalette,
+                                --palette--;;filePalette'
+                            ],
+                        ],
+                    ],
+                ],
+                $GLOBALS['TYPO3_CONF_VARS']['GFX']['imagefile_ext']
+            ),
+        ],
+        'link' => [
+            'exclude' => 1,
+            'label' => 'LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:header_link',
+            'config' => [
+                'type' => 'input',
+                'renderType' => 'inputLink',
+                'eval' => 'trim',
+            ],
+        ],
     ],
     'types' => [
         1 => [
             'showitem' => '
-                --div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:general,title,text,
+                --div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:general,title,text,image,link,
                 --div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:language,
                 --palette--;;language,--div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:access,--palette--;;hidden,--palette--;;access
             ',

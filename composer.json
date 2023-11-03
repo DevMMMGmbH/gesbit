@@ -23,6 +23,7 @@
 		"grid-design/rh-theme": "@dev",
 		"helhum/typo3-console": "^7.0.2",
 		"internetgalerie/ig-slug": "^1.0",
+		"netresearch/rte-ckeditor-image": "^11.0",
 		"oliverklee/onetimeaccount": "^6.2",
 		"oliverklee/seminars": "^5.3",
 		"opfaff/om-cookie-manager": "^11.0",
@@ -58,7 +59,7 @@
 		"typo3/cms-sys-note": "^11.5.0",
 		"typo3/cms-t3editor": "^11.5.0",
 		"typo3/cms-tstemplate": "^11.5.0",
-		"wapplersystems/ws-scss": "^1.2"
+		"wapplersystems/ws-scss": "^11.0"
 	},
 	"scripts":{
 		"typo3-cms-scripts": [

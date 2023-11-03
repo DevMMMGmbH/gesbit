@@ -7,4 +7,6 @@ CREATE TABLE tx_rhtheme_akkordeon (
     parenttable varchar(255) DEFAULT '' NOT NULL,
     title varchar(255) DEFAULT '' NOT NULL,
 	text text,
+    image text,
+	link text
 );
