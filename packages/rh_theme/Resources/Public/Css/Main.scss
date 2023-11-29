@@ -1674,6 +1674,31 @@ body {
                 color: #000;
             }
             .veranstaltungen-fieldset {
+                &.dsgvo {
+                    .mb-3 {
+                        display: inline;
+                        .form-check {
+                            display: flex;
+                            flex-direction: row-reverse;
+                            justify-content: start;
+                        }
+                    }
+                    .help-block {
+                        margin-top: 10px;
+                    }
+                }
+                .mb-3 {
+                    display: flex;
+                    flex-wrap: wrap;
+                    align-items: center;
+                    // justify-content: space-between;
+                    label {
+                        float: none;
+                        line-height: inherit;
+                        height: inherit;
+                        // flex-grow: 1;
+                    }
+                }
                 .float-left {
                     float: left;
                 }
