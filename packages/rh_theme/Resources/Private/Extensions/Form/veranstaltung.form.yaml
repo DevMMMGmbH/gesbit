@@ -1,6 +1,6 @@
 
 renderingOptions:
-  submitButtonLabel: Submit
+  submitButtonLabel: 'Anmeldung absenden'
   fieldState:
     singleselect-1:
       identifier: singleselect-1
@@ -10,13 +10,13 @@ renderingOptions:
         deleted: 0
     text-1:
       identifier: text-1
-      label: 'Ihr Vorname'
+      label: Vorname
       type: Text
       renderingOptions:
         deleted: 0
     text-2:
       identifier: text-2
-      label: 'Ihr Nachname'
+      label: Nachname
       type: Text
       renderingOptions:
         deleted: 0
@@ -32,15 +32,15 @@ renderingOptions:
       type: Text
       renderingOptions:
         deleted: 0
-    text-5:
-      identifier: text-5
-      label: 'Ihre E-Mail-Adresse'
-      type: Text
+    email-1:
+      identifier: email-1
+      label: E-Mail-Adresse
+      type: Email
       renderingOptions:
         deleted: 0
     text-7:
       identifier: text-7
-      label: 'Ihre Telefonnummer'
+      label: Telefonnummer
       type: Text
       renderingOptions:
         deleted: 0
@@ -52,43 +52,43 @@ renderingOptions:
         deleted: 0
     statictext-1:
       identifier: statictext-1
-      label: 'Static text'
+      label: ''
       type: StaticText
       renderingOptions:
         deleted: 0
     text-6:
       identifier: text-6
-      label: 'Vorname Ihrer Begleitung'
+      label: 'Vorname (Begleitung)'
       type: Text
       renderingOptions:
         deleted: 0
     text-8:
       identifier: text-8
-      label: 'Nachname Ihrer Begleitung'
+      label: 'Nachname (Begleitung)'
       type: Text
       renderingOptions:
         deleted: 0
     text-9:
       identifier: text-9
-      label: 'Straße, Hausnummer Ihrer Begleitung'
+      label: 'Straße, Hausnummer (Begleitung)'
       type: Text
       renderingOptions:
         deleted: 0
     text-10:
       identifier: text-10
-      label: 'Postleitzahl, Ort Ihrer Begleitung'
+      label: 'Postleitzahl, Ort (Begleitung)'
       type: Text
       renderingOptions:
         deleted: 0
-    email-1:
-      identifier: email-1
-      label: 'E-Mail-Adresse Ihrer Begleitung'
+    email-2:
+      identifier: email-2
+      label: 'E-Mail-Adresse (Begleitung)'
       type: Email
       renderingOptions:
         deleted: 0
     text-11:
       identifier: text-11
-      label: 'Telefonnummer Ihrer Begleitung'
+      label: 'Telefonnummer (Begleitung)'
       type: Text
       renderingOptions:
         deleted: 0
@@ -98,10 +98,24 @@ renderingOptions:
       type: Checkbox
       renderingOptions:
         deleted: 0
+    statictext-2:
+      identifier: statictext-2
+      label: ''
+      type: StaticText
+      renderingOptions:
+        deleted: 0
 type: Form
 identifier: veranstaltung
 label: Veranstaltung
 prototypeName: standard
+finishers:
+  -
+    identifier: FormToDatabase
+  -
+    options:
+      message: 'Vielen Dank für Ihre Nachricht!'
+      contentElementUid: ''
+    identifier: Confirmation
 renderables:
   -
     renderingOptions:
@@ -109,382 +123,509 @@ renderables:
       nextButtonLabel: weiter
     type: Page
     identifier: page-1
-    label: 'Schritt 1'
+    label: 'Ihre persönlichen Daten'
     renderables:
       -
         properties:
-          options:
-            'Veranstaltung 1': 'Veranstaltung 1'
-            'Veranstaltung 2': 'Veranstaltung 2'
-            'Veranstaltung 3': 'Veranstaltung 3'
-            'Veranstaltung 4': 'Veranstaltung 4'
-          prependOptionLabel: 'Bitte wählen Sie aus der Liste die Veranstaltung aus, an der Sie teilnehmen möchten.'
-          fluidAdditionalAttributes:
-            required: required
-          validationErrorMessages:
-            -
-              code: 1221560910
-              message: 'Wählen Sie bitte eine Veranstaltung aus.'
-            -
-              code: 1221560718
-              message: 'Wählen Sie bitte eine Veranstaltung aus.'
-            -
-              code: 1347992400
-              message: 'Wählen Sie bitte eine Veranstaltung aus.'
-            -
-              code: 1347992453
-              message: 'Wählen Sie bitte eine Veranstaltung aus.'
-        type: SingleSelect
-        identifier: singleselect-1
-        label: Veranstaltung
-        validators:
-          -
-            identifier: NotEmpty
+          text: 'Bitte füllen Sie die mit * gekennzeichneten Pflichtfelder aus.'
+        type: StaticText
+        identifier: statictext-2
+        label: ''
       -
-        type: GridRow
-        identifier: gridrow-1
-        label: 'Grid: Row'
-        renderables:
-          -
-            defaultValue: ''
-            type: Text
-            identifier: text-1
-            label: 'Ihr Vorname'
-            properties:
-              fluidAdditionalAttributes:
-                required: required
-                minlength: '0'
-                maxlength: '300'
-              validationErrorMessages:
-                -
-                  code: 1221560910
-                  message: 'Tragen Sie bitte Ihren Vorname ein.'
-                -
-                  code: 1221560718
-                  message: 'Tragen Sie bitte Ihren Vorname ein.'
-                -
-                  code: 1347992400
-                  message: 'Tragen Sie bitte Ihren Vorname ein.'
-                -
-                  code: 1347992453
-                  message: 'Tragen Sie bitte Ihren Vorname ein.'
-              gridColumnClassAutoConfiguration:
-                viewPorts:
-                  xxl:
-                    numbersOfColumnsToUse: '6'
-            validators:
-              -
-                identifier: NotEmpty
-              -
-                options:
-                  minimum: '0'
-                  maximum: '300'
-                identifier: StringLength
-          -
-            defaultValue: ''
-            type: Text
-            identifier: text-2
-            label: 'Ihr Nachname'
-            properties:
-              fluidAdditionalAttributes:
-                required: required
-                minlength: '0'
-                maxlength: '300'
-              validationErrorMessages:
-                -
-                  code: 1221560910
-                  message: 'Tragen Sie bitte Ihren Nachnamen ein.'
-                -
-                  code: 1221560718
-                  message: 'Tragen Sie bitte Ihren Nachnamen ein.'
-                -
-                  code: 1347992400
-                  message: 'Tragen Sie bitte Ihren Nachnamen ein.'
-                -
-                  code: 1347992453
-                  message: 'Tragen Sie bitte Ihren Nachnamen ein.'
-              gridColumnClassAutoConfiguration:
-                viewPorts:
-                  xxl:
-                    numbersOfColumnsToUse: '6'
-            validators:
-              -
-                identifier: NotEmpty
-              -
-                options:
-                  minimum: '0'
-                  maximum: '300'
-                identifier: StringLength
-      -
-        type: GridRow
-        identifier: gridrow-2
-        label: 'Grid: Row'
-        renderables:
-          -
-            defaultValue: ''
-            type: Text
-            identifier: text-3
-            label: 'Straße, Hausnummer'
-            properties:
-              fluidAdditionalAttributes:
-                minlength: '0'
-                maxlength: '300'
-              gridColumnClassAutoConfiguration:
-                viewPorts:
-                  xxl:
-                    numbersOfColumnsToUse: '6'
-            validators:
-              -
-                options:
-                  minimum: '0'
-                  maximum: '300'
-                identifier: StringLength
-          -
-            defaultValue: ''
-            type: Text
-            identifier: text-4
-            label: 'Postleitzahl, Ort'
-            properties:
-              gridColumnClassAutoConfiguration:
-                viewPorts:
-                  xxl:
-                    numbersOfColumnsToUse: '6'
-              fluidAdditionalAttributes:
-                minlength: '0'
-                maxlength: '300'
-            validators:
-              -
-                options:
-                  minimum: '0'
-                  maximum: '300'
-                identifier: StringLength
-      -
-        type: GridRow
-        identifier: gridrow-3
-        label: 'Grid: Row'
-        renderables:
-          -
-            defaultValue: ''
-            type: Text
-            identifier: text-5
-            label: 'Ihre E-Mail-Adresse'
-            properties:
-              gridColumnClassAutoConfiguration:
-                viewPorts:
-                  xxl:
-                    numbersOfColumnsToUse: '6'
-              fluidAdditionalAttributes:
-                required: required
-            validators:
-              -
-                identifier: NotEmpty
-              -
-                identifier: EmailAddress
-          -
-            defaultValue: ''
-            type: Text
-            identifier: text-7
-            label: 'Ihre Telefonnummer'
-            properties:
-              fluidAdditionalAttributes:
-                minlength: '0'
-                maxlength: '300'
-            validators:
-              -
-                options:
-                  minimum: '0'
-                  maximum: '300'
-                identifier: StringLength
-      -
+        type: Fieldset
+        identifier: fieldset-1
+        label: ''
         properties:
-          options:
-            'Ich komme alleine.': 'Ich komme alleine.'
-            'Ich komme in Begleitung mit ...': 'Ich komme in Begleitung mit ...'
-          fluidAdditionalAttributes:
-            required: required
-          validationErrorMessages:
-            -
-              code: 1221560910
-              message: 'Kommen Sie in Begleitung oder alleine'
-            -
-              code: 1221560718
-              message: 'Kommen Sie in Begleitung oder alleine'
-            -
-              code: 1347992400
-              message: 'Kommen Sie in Begleitung oder alleine'
-            -
-              code: 1347992453
-              message: 'Kommen Sie in Begleitung oder alleine'
-        type: RadioButton
-        identifier: radiobutton-1
-        label: Teilnahme
-        validators:
+          elementClassAttribute: veranstaltungen-fieldset
+        renderables:
           -
-            identifier: NotEmpty
+            properties:
+              options:
+                'Veranstaltung 1': 'Veranstaltung 1'
+                'Veranstaltung 2': 'Veranstaltung 2'
+                'Veranstaltung 3': 'Veranstaltung 3'
+                'Veranstaltung 4': 'Veranstaltung 4'
+              prependOptionLabel: 'Auswahl kommender Veranstaltung'
+              fluidAdditionalAttributes:
+                required: required
+              validationErrorMessages:
+                -
+                  code: 1221560910
+                  message: 'Wählen Sie bitte eine Veranstaltung aus.'
+                -
+                  code: 1221560718
+                  message: 'Wählen Sie bitte eine Veranstaltung aus.'
+                -
+                  code: 1347992400
+                  message: 'Wählen Sie bitte eine Veranstaltung aus.'
+                -
+                  code: 1347992453
+                  message: 'Wählen Sie bitte eine Veranstaltung aus.'
+            type: SingleSelect
+            identifier: singleselect-1
+            label: Veranstaltung
+            validators:
+              -
+                identifier: NotEmpty
+          -
+            type: GridRow
+            identifier: gridrow-1
+            label: 'Grid: Row'
+            renderables:
+              -
+                defaultValue: ''
+                type: Text
+                identifier: text-1
+                label: Vorname
+                properties:
+                  fluidAdditionalAttributes:
+                    required: required
+                    minlength: '0'
+                    maxlength: '300'
+                    placeholder: 'Ihr Vorname'
+                  validationErrorMessages:
+                    -
+                      code: 1221560910
+                      message: 'Tragen Sie bitte Ihren Vorname ein.'
+                    -
+                      code: 1221560718
+                      message: 'Tragen Sie bitte Ihren Vorname ein.'
+                    -
+                      code: 1347992400
+                      message: 'Tragen Sie bitte Ihren Vorname ein.'
+                    -
+                      code: 1347992453
+                      message: 'Tragen Sie bitte Ihren Vorname ein.'
+                  gridColumnClassAutoConfiguration:
+                    viewPorts:
+                      xxl:
+                        numbersOfColumnsToUse: '6'
+                validators:
+                  -
+                    identifier: NotEmpty
+                  -
+                    options:
+                      minimum: '0'
+                      maximum: '300'
+                    identifier: StringLength
+              -
+                defaultValue: ''
+                type: Text
+                identifier: text-2
+                label: Nachname
+                properties:
+                  fluidAdditionalAttributes:
+                    required: required
+                    minlength: '0'
+                    maxlength: '300'
+                    placeholder: 'Ihr Nachname'
+                  validationErrorMessages:
+                    -
+                      code: 1221560910
+                      message: 'Tragen Sie bitte Ihren Nachnamen ein.'
+                    -
+                      code: 1221560718
+                      message: 'Tragen Sie bitte Ihren Nachnamen ein.'
+                    -
+                      code: 1347992400
+                      message: 'Tragen Sie bitte Ihren Nachnamen ein.'
+                    -
+                      code: 1347992453
+                      message: 'Tragen Sie bitte Ihren Nachnamen ein.'
+                  gridColumnClassAutoConfiguration:
+                    viewPorts:
+                      xxl:
+                        numbersOfColumnsToUse: '6'
+                validators:
+                  -
+                    identifier: NotEmpty
+                  -
+                    options:
+                      minimum: '0'
+                      maximum: '300'
+                    identifier: StringLength
+          -
+            type: GridRow
+            identifier: gridrow-2
+            label: 'Grid: Row'
+            renderables:
+              -
+                defaultValue: ''
+                type: Text
+                identifier: text-3
+                label: 'Straße, Hausnummer'
+                properties:
+                  fluidAdditionalAttributes:
+                    minlength: '0'
+                    maxlength: '300'
+                    placeholder: 'Ihre Straße, Hausnummer'
+                  gridColumnClassAutoConfiguration:
+                    viewPorts:
+                      xxl:
+                        numbersOfColumnsToUse: '6'
+                validators:
+                  -
+                    options:
+                      minimum: '0'
+                      maximum: '300'
+                    identifier: StringLength
+              -
+                defaultValue: ''
+                type: Text
+                identifier: text-4
+                label: 'Postleitzahl, Ort'
+                properties:
+                  gridColumnClassAutoConfiguration:
+                    viewPorts:
+                      xxl:
+                        numbersOfColumnsToUse: '6'
+                  fluidAdditionalAttributes:
+                    minlength: '0'
+                    maxlength: '300'
+                    placeholder: 'Ihre Postleitzahl, Ort'
+                validators:
+                  -
+                    options:
+                      minimum: '0'
+                      maximum: '300'
+                    identifier: StringLength
+          -
+            type: GridRow
+            identifier: gridrow-3
+            label: 'Grid: Row'
+            renderables:
+              -
+                defaultValue: ''
+                type: Email
+                identifier: email-1
+                label: E-Mail-Adresse
+                properties:
+                  gridColumnClassAutoConfiguration:
+                    viewPorts:
+                      xxl:
+                        numbersOfColumnsToUse: '6'
+                  fluidAdditionalAttributes:
+                    required: required
+                    placeholder: 'Ihre E-Mail-Adresse'
+                  validationErrorMessages:
+                    -
+                      code: 1221559976
+                      message: 'Bitte ein gültige E-Mail-Adresse eintragen.'
+                    -
+                      code: 1221560910
+                      message: 'Bitte ein gültige E-Mail-Adresse eintragen.'
+                    -
+                      code: 1221560718
+                      message: 'Bitte ein gültige E-Mail-Adresse eintragen.'
+                    -
+                      code: 1347992400
+                      message: 'Bitte ein gültige E-Mail-Adresse eintragen.'
+                    -
+                      code: 1347992453
+                      message: 'Bitte ein gültige E-Mail-Adresse eintragen.'
+                validators:
+                  -
+                    identifier: EmailAddress
+                  -
+                    identifier: NotEmpty
+              -
+                defaultValue: ''
+                type: Text
+                identifier: text-7
+                label: Telefonnummer
+                properties:
+                  fluidAdditionalAttributes:
+                    minlength: '0'
+                    maxlength: '300'
+                    placeholder: 'Ihre Telefonnummer'
+                  gridColumnClassAutoConfiguration:
+                    viewPorts:
+                      xxl:
+                        numbersOfColumnsToUse: '6'
+                validators:
+                  -
+                    options:
+                      minimum: '0'
+                      maximum: '300'
+                    identifier: StringLength
+          -
+            properties:
+              containerClassAttribute: float-left
+              options:
+                'Ich komme alleine.': 'Ich komme alleine.'
+                'Ich komme in Begleitung mit ...': 'Ich komme in Begleitung mit ...'
+              fluidAdditionalAttributes:
+                required: required
+              validationErrorMessages:
+                -
+                  code: 1221560910
+                  message: 'Kommen Sie in Begleitung oder alleine?'
+                -
+                  code: 1221560718
+                  message: 'Kommen Sie in Begleitung oder alleine?'
+                -
+                  code: 1347992400
+                  message: 'Kommen Sie in Begleitung oder alleine?'
+                -
+                  code: 1347992453
+                  message: 'Kommen Sie in Begleitung oder alleine?'
+            type: RadioButton
+            identifier: radiobutton-1
+            label: Teilnahme
+            validators:
+              -
+                identifier: NotEmpty
   -
     renderingOptions:
       previousButtonLabel: zurück
       nextButtonLabel: weiter
     type: Page
     identifier: page-2
-    label: 'Schritt 2'
+    label: 'Persönliche Daten Ihrer Begleitung'
+    variants:
+      -
+        identifier: variant-1
+        condition: 'formValues["radiobutton-1"] == "Ich komme alleine."'
+        renderingOptions:
+          enabled: false
     renderables:
       -
         properties:
-          text: 'Ihre Begleitung'
+          text: 'Bitte füllen Sie die mit * gekennzeichneten Pflichtfelder aus.'
         type: StaticText
         identifier: statictext-1
-        label: 'Static text'
+        label: ''
       -
-        type: GridRow
-        identifier: gridrow-4
-        label: 'Grid: Row'
-        renderables:
-          -
-            defaultValue: ''
-            type: Text
-            identifier: text-6
-            label: 'Vorname Ihrer Begleitung'
-            properties:
-              gridColumnClassAutoConfiguration:
-                viewPorts:
-                  xxl:
-                    numbersOfColumnsToUse: '6'
-              fluidAdditionalAttributes:
-                required: required
-                minlength: '1'
-                maxlength: '300'
-            validators:
-              -
-                identifier: NotEmpty
-              -
-                options:
-                  minimum: '1'
-                  maximum: '300'
-                identifier: StringLength
-          -
-            defaultValue: ''
-            type: Text
-            identifier: text-8
-            label: 'Nachname Ihrer Begleitung'
-            properties:
-              gridColumnClassAutoConfiguration:
-                viewPorts:
-                  xxl:
-                    numbersOfColumnsToUse: '6'
-              fluidAdditionalAttributes:
-                required: required
-                minlength: '1'
-                maxlength: '300'
-            validators:
-              -
-                identifier: NotEmpty
-              -
-                options:
-                  minimum: '1'
-                  maximum: '300'
-                identifier: StringLength
-      -
-        type: GridRow
-        identifier: gridrow-5
-        label: 'Grid: Row'
-        renderables:
-          -
-            defaultValue: ''
-            type: Text
-            identifier: text-9
-            label: 'Straße, Hausnummer Ihrer Begleitung'
-            properties:
-              gridColumnClassAutoConfiguration:
-                viewPorts:
-                  xxl:
-                    numbersOfColumnsToUse: '6'
-              fluidAdditionalAttributes:
-                minlength: '0'
-                maxlength: '300'
-            validators:
-              -
-                options:
-                  minimum: '0'
-                  maximum: '300'
-                identifier: StringLength
-          -
-            defaultValue: ''
-            type: Text
-            identifier: text-10
-            label: 'Postleitzahl, Ort Ihrer Begleitung'
-            properties:
-              gridColumnClassAutoConfiguration:
-                viewPorts:
-                  xxl:
-                    numbersOfColumnsToUse: '6'
-              fluidAdditionalAttributes:
-                minlength: '0'
-                maxlength: '300'
-            validators:
-              -
-                options:
-                  minimum: '0'
-                  maximum: '300'
-                identifier: StringLength
-      -
-        type: GridRow
-        identifier: gridrow-6
-        label: 'Grid: Row'
-        renderables:
-          -
-            defaultValue: ''
-            type: Email
-            identifier: email-1
-            label: 'E-Mail-Adresse Ihrer Begleitung'
-            properties:
-              fluidAdditionalAttributes:
-                required: required
-            validators:
-              -
-                identifier: EmailAddress
-              -
-                identifier: NotEmpty
-          -
-            defaultValue: ''
-            type: Text
-            identifier: text-11
-            label: 'Telefonnummer Ihrer Begleitung'
-            properties:
-              gridColumnClassAutoConfiguration:
-                viewPorts:
-                  xxl:
-                    numbersOfColumnsToUse: '6'
-              fluidAdditionalAttributes:
-                minlength: '0'
-                maxlength: '300'
-            validators:
-              -
-                options:
-                  minimum: '0'
-                  maximum: '300'
-                identifier: StringLength
-      -
-        type: Checkbox
-        identifier: checkbox-1
-        label: Datenschutz
+        type: Fieldset
+        identifier: fieldset-2
+        label: ''
         properties:
-          fluidAdditionalAttributes:
-            required: required
-          elementDescription: 'Ich habe die Datenschutzerklärung zur Kenntnis genommen und bin damit einverstanden, dass die von mir angegebenen Daten elektronisch erhoben und gespeichert werden.'
-          validationErrorMessages:
-            -
-              code: 1221560910
-              message: 'Akzeptieren Sie bitte unsere Datenschutzerklärung.'
-            -
-              code: 1221560718
-              message: 'Akzeptieren Sie bitte unsere Datenschutzerklärung.'
-            -
-              code: 1347992400
-              message: 'Akzeptieren Sie bitte unsere Datenschutzerklärung.'
-            -
-              code: 1347992453
-              message: 'Akzeptieren Sie bitte unsere Datenschutzerklärung.'
-        validators:
+          elementClassAttribute: veranstaltungen-fieldset
+        renderables:
           -
-            identifier: NotEmpty
+            type: GridRow
+            identifier: gridrow-4
+            label: 'Grid: Row'
+            renderables:
+              -
+                defaultValue: ''
+                type: Text
+                identifier: text-6
+                label: 'Vorname (Begleitung)'
+                properties:
+                  gridColumnClassAutoConfiguration:
+                    viewPorts:
+                      xxl:
+                        numbersOfColumnsToUse: '6'
+                  fluidAdditionalAttributes:
+                    required: required
+                    minlength: '1'
+                    maxlength: '300'
+                    placeholder: 'Vorname Ihrer Begleitung'
+                  validationErrorMessages:
+                    -
+                      code: 1221560910
+                      message: 'Tragen Sie bitte den Vornamen Ihrer Begleitung ein.'
+                    -
+                      code: 1221560718
+                      message: 'Tragen Sie bitte den Vornamen Ihrer Begleitung ein.'
+                    -
+                      code: 1347992400
+                      message: 'Tragen Sie bitte den Vornamen Ihrer Begleitung ein.'
+                    -
+                      code: 1347992453
+                      message: 'Tragen Sie bitte den Vornamen Ihrer Begleitung ein.'
+                validators:
+                  -
+                    identifier: NotEmpty
+                  -
+                    options:
+                      minimum: '1'
+                      maximum: '300'
+                    identifier: StringLength
+              -
+                defaultValue: ''
+                type: Text
+                identifier: text-8
+                label: 'Nachname (Begleitung)'
+                properties:
+                  gridColumnClassAutoConfiguration:
+                    viewPorts:
+                      xxl:
+                        numbersOfColumnsToUse: '6'
+                  fluidAdditionalAttributes:
+                    required: required
+                    minlength: '1'
+                    maxlength: '300'
+                    placeholder: 'Nachname Ihrer Begleitung'
+                  validationErrorMessages:
+                    -
+                      code: 1221560910
+                      message: 'Tragen Sie bitte den Nachnamen Ihrer Begleitung ein.'
+                    -
+                      code: 1221560718
+                      message: 'Tragen Sie bitte den Nachnamen Ihrer Begleitung ein.'
+                    -
+                      code: 1347992400
+                      message: 'Tragen Sie bitte den Nachnamen Ihrer Begleitung ein.'
+                    -
+                      code: 1347992453
+                      message: 'Tragen Sie bitte den Nachnamen Ihrer Begleitung ein.'
+                validators:
+                  -
+                    identifier: NotEmpty
+                  -
+                    options:
+                      minimum: '1'
+                      maximum: '300'
+                    identifier: StringLength
+          -
+            type: GridRow
+            identifier: gridrow-5
+            label: 'Grid: Row'
+            renderables:
+              -
+                defaultValue: ''
+                type: Text
+                identifier: text-9
+                label: 'Straße, Hausnummer (Begleitung)'
+                properties:
+                  gridColumnClassAutoConfiguration:
+                    viewPorts:
+                      xxl:
+                        numbersOfColumnsToUse: '6'
+                  fluidAdditionalAttributes:
+                    minlength: '0'
+                    maxlength: '300'
+                    placeholder: 'Straße, Hausnummer Ihrer Begleitung'
+                validators:
+                  -
+                    options:
+                      minimum: '0'
+                      maximum: '300'
+                    identifier: StringLength
+              -
+                defaultValue: ''
+                type: Text
+                identifier: text-10
+                label: 'Postleitzahl, Ort (Begleitung)'
+                properties:
+                  gridColumnClassAutoConfiguration:
+                    viewPorts:
+                      xxl:
+                        numbersOfColumnsToUse: '6'
+                  fluidAdditionalAttributes:
+                    minlength: '0'
+                    maxlength: '300'
+                    placeholder: 'Postleitzahl, Ort Ihrer Begleitung'
+                validators:
+                  -
+                    options:
+                      minimum: '0'
+                      maximum: '300'
+                    identifier: StringLength
+          -
+            type: GridRow
+            identifier: gridrow-6
+            label: 'Grid: Row'
+            renderables:
+              -
+                defaultValue: ''
+                type: Email
+                identifier: email-2
+                label: 'E-Mail-Adresse (Begleitung)'
+                properties:
+                  fluidAdditionalAttributes:
+                    required: required
+                    placeholder: 'E-Mail-Adresse Ihrer Begleitung'
+                  validationErrorMessages:
+                    -
+                      code: 1221560910
+                      message: 'Bitte ein gültige E-Mail-Adresse eintragen.'
+                    -
+                      code: 1221560718
+                      message: 'Bitte ein gültige E-Mail-Adresse eintragen.'
+                    -
+                      code: 1347992400
+                      message: 'Bitte ein gültige E-Mail-Adresse eintragen.'
+                    -
+                      code: 1347992453
+                      message: 'Bitte ein gültige E-Mail-Adresse eintragen.'
+                    -
+                      code: 1221559976
+                      message: 'Bitte ein gültige E-Mail-Adresse eintragen.'
+                  gridColumnClassAutoConfiguration:
+                    viewPorts:
+                      xxl:
+                        numbersOfColumnsToUse: '6'
+                validators:
+                  -
+                    identifier: EmailAddress
+                  -
+                    identifier: NotEmpty
+              -
+                defaultValue: ''
+                type: Text
+                identifier: text-11
+                label: 'Telefonnummer (Begleitung)'
+                properties:
+                  gridColumnClassAutoConfiguration:
+                    viewPorts:
+                      xxl:
+                        numbersOfColumnsToUse: '6'
+                  fluidAdditionalAttributes:
+                    minlength: '0'
+                    maxlength: '300'
+                    placeholder: 'Telefonnummer Ihrer Begleitung'
+                validators:
+                  -
+                    options:
+                      minimum: '0'
+                      maximum: '300'
+                    identifier: StringLength
+  -
+    renderingOptions:
+      previousButtonLabel: zurück
+      nextButtonLabel: weiter
+    type: Page
+    identifier: page-3
+    label: Datenschutz
+    renderables:
+      -
+        type: Fieldset
+        identifier: fieldset-3
+        label: ''
+        properties:
+          elementClassAttribute: veranstaltungen-fieldset
+        renderables:
+          -
+            type: Checkbox
+            identifier: checkbox-1
+            label: Datenschutz
+            properties:
+              fluidAdditionalAttributes:
+                required: required
+              elementDescription: 'Datenschutzerklärung ist zur Kenntnis genommen.'
+              validationErrorMessages:
+                -
+                  code: 1221560910
+                  message: 'Akzeptieren Sie bitte unsere Datenschutzerklärung.'
+                -
+                  code: 1221560718
+                  message: 'Akzeptieren Sie bitte unsere Datenschutzerklärung.'
+                -
+                  code: 1347992400
+                  message: 'Akzeptieren Sie bitte unsere Datenschutzerklärung.'
+                -
+                  code: 1347992453
+                  message: 'Akzeptieren Sie bitte unsere Datenschutzerklärung.'
+            validators:
+              -
+                identifier: NotEmpty
+  -
+    renderingOptions:
+      previousButtonLabel: zurück
+      nextButtonLabel: weiter
+    type: SummaryPage
+    identifier: summarypage-1
+    label: Zusammenfassung

@@ -1557,6 +1557,11 @@ body {
         /* formhandler kontaktform */
         .rh-mod_form {
 
+            input::placeholder {
+                opacity: 0.25;
+                color: #000000;
+                font-style: italic;
+            }
             .actions {
                 button[type="submit"] {
                     @include input_submit;
@@ -1667,6 +1672,23 @@ body {
                 float: left;
                 background: #f0f0f0;
                 color: #000;
+            }
+            .veranstaltungen-fieldset {
+                .float-left {
+                    float: left;
+                }
+                div.radio {
+
+                    input[type="radio"] {
+                        float: none;
+                        margin-left: 0;
+                    }
+                    label {
+                        float: none;
+                        display: inline;
+                        margin-left: 0;
+                    }
+                }
             }
         }
         /* object (YouTube Video) */
