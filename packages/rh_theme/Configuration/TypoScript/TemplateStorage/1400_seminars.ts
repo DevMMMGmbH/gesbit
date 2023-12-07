@@ -9,9 +9,9 @@ plugin.tx_seminars{
     }
 
 }
-[PIDinRootline = 30]
+// [PIDinRootline = 30]
 
-[end]
+// [end]
 
 #Intranet
 

@@ -566,7 +566,7 @@ renderables:
         identifier: fieldset-3
         label: ''
         properties:
-          elementClassAttribute: veranstaltungen-fieldset dsgvo
+          elementClassAttribute: 'veranstaltungen-fieldset dsgvo'
         renderables:
           -
             type: Checkbox

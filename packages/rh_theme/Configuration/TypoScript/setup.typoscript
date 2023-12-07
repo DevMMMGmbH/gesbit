@@ -27,10 +27,10 @@
 #### PAGE ####
 ##############
 page = PAGE
-@import 'EXT:rh_theme/Configuration/TypoScript/Page/Basics.typoscript'
+// @import 'EXT:rh_theme/Configuration/TypoScript/Page/Basics.typoscript'
 @import 'EXT:rh_theme/Configuration/TypoScript/Page/FileInclude.typoscript'
 @import 'EXT:rh_theme/Configuration/TypoScript/Page/Template.typoscript'
-@import 'EXT:rh_theme/Configuration/TypoScript/Page/Meta.typoscript'
+// @import 'EXT:rh_theme/Configuration/TypoScript/Page/Meta.typoscript'
 
 
 ################
@@ -42,7 +42,7 @@ page = PAGE
 ####################
 #### RTE CONFIG ####
 ####################
-@import 'EXT:rh_theme/Configuration/TypoScript/Rte/parseFunc_RTE.typoscript'
+// @import 'EXT:rh_theme/Configuration/TypoScript/Rte/parseFunc_RTE.typoscript'
 
 
 // alte scheiße
